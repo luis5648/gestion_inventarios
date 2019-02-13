@@ -999,88 +999,172 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="254" parent="6" name="equipos"/>
-    <table id="255" parent="6" name="usuarios">
+    <table id="254" parent="6" name="admins"/>
+    <table id="255" parent="6" name="categoria"/>
+    <table id="256" parent="6" name="equipos"/>
+    <table id="257" parent="6" name="propietario"/>
+    <table id="258" parent="6" name="usuarios">
       <Comment>Departamentos </Comment>
     </table>
-    <column id="256" parent="254" name="ID_Equipo">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="257" parent="254" name="Modelo">
-      <Position>2</Position>
-      <DataType>varchar(20)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="258" parent="254" name="N_serie">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="259" parent="254" name="Ubicacion">
-      <Position>4</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="260" parent="254" name="Marca">
-      <Position>5</Position>
-      <DataType>varchar(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="261" parent="254" name="ID_Usuario">
-      <Position>6</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="262" parent="254" name="Nombre_Equipo">
-      <Position>7</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="263" parent="254" name="Equipos_ID_Equipo_uindex">
-      <ColNames>ID_Equipo</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <index id="264" parent="254" name="ID_Usuario">
-      <ColNames>ID_Usuario</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="265" parent="254" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>ID_Equipo</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <key id="266" parent="254" name="Equipos_ID_Equipo_uindex">
-      <ColNames>ID_Equipo</ColNames>
-      <UnderlyingIndexName>Equipos_ID_Equipo_uindex</UnderlyingIndexName>
-    </key>
-    <foreign-key id="267" parent="254" name="ID_Usuario">
-      <ColNames>ID_Usuario</ColNames>
-      <RefSchemaName>inventario_ucta</RefSchemaName>
-      <RefTableName>usuarios</RefTableName>
-      <RefColNames>ID_Usuario</RefColNames>
-    </foreign-key>
-    <column id="268" parent="255" name="ID_Usuario">
+    <column id="259" parent="254" name="ID_Admin">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="255" name="nombreUsuario">
+    <column id="260" parent="254" name="User_Admin">
       <Position>2</Position>
-      <DataType>varchar(40)|0s</DataType>
+      <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="255" name="Pass">
+    <column id="261" parent="254" name="Pass_Admin">
       <Position>3</Position>
       <DataType>varchar(16)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="271" parent="255" name="PRIMARY">
+    <key id="262" parent="254" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID_Admin</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="263" parent="255" name="ID_Categoria">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="264" parent="255" name="Nombre_Categoria">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="265" parent="255" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID_Categoria</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="266" parent="256" name="ID_Equipo">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="267" parent="256" name="Modelo">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="268" parent="256" name="N_serie">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="269" parent="256" name="Ubicacion">
+      <Position>4</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="270" parent="256" name="Marca">
+      <Position>5</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="271" parent="256" name="Nombre_Equipo">
+      <Position>6</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="272" parent="256" name="ID_Categoria">
+      <Position>7</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="273" parent="256" name="ID_Propietario">
+      <Position>8</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="274" parent="256" name="Equipos_ID_Equipo_uindex">
+      <ColNames>ID_Equipo</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="275" parent="256" name="equipos_categoria_ID_Categoria_fk">
+      <ColNames>ID_Categoria</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="276" parent="256" name="equipos_propietario_ID_Propietario_fk">
+      <ColNames>ID_Propietario</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="277" parent="256" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID_Equipo</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="278" parent="256" name="Equipos_ID_Equipo_uindex">
+      <ColNames>ID_Equipo</ColNames>
+      <UnderlyingIndexName>Equipos_ID_Equipo_uindex</UnderlyingIndexName>
+    </key>
+    <foreign-key id="279" parent="256" name="equipos_categoria_ID_Categoria_fk">
+      <ColNames>ID_Categoria</ColNames>
+      <RefSchemaName>inventario_ucta</RefSchemaName>
+      <RefTableName>categoria</RefTableName>
+      <RefColNames>ID_Categoria</RefColNames>
+    </foreign-key>
+    <foreign-key id="280" parent="256" name="equipos_propietario_ID_Propietario_fk">
+      <ColNames>ID_Propietario</ColNames>
+      <RefSchemaName>inventario_ucta</RefSchemaName>
+      <RefTableName>propietario</RefTableName>
+      <RefColNames>ID_Propietario</RefColNames>
+    </foreign-key>
+    <column id="281" parent="257" name="ID_Propietario">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="282" parent="257" name="Nombre_Propietario">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="283" parent="257" name="Telefono">
+      <Position>3</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="284" parent="257" name="Aula">
+      <Position>4</Position>
+      <DataType>varchar(15)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="285" parent="257" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID_Propietario</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="286" parent="258" name="ID_Usuario">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="287" parent="258" name="nombreUsuario">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="288" parent="258" name="Pass">
+      <Position>3</Position>
+      <DataType>varchar(16)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="289" parent="258" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID_Usuario</ColNames>
       <Primary>1</Primary>

@@ -52,6 +52,7 @@
 						<button class="login100-form-btn" name="inicioSesion">
 							Iniciar sesión
 						</button>
+                        <p ><a style="color: black;" href="PHP/AgregarUsuarios.php">Agregar nuevos usuarios (Solo administrador)</a></p>
 					</div>
 					
 
@@ -71,9 +72,12 @@
                         }
 
                         $sql = "SELECT * from usuarios  where nombreUsuario = '$usuario' and pass = '$pass' ";
+                        $sql2 = "SELECT * FROM admins where User_Admin = '$usuario' and Pass_Admin = '$pass'";
+                        $result2 = $conn->query($sql2);
                         $result = $conn->query($sql);
-                        if ($result->num_rows > 0)
+                        if ($result->num_rows > 0||$result2->num_rows>0)
                         {
+                            //VARIABLE DE SESIÓN DEL USUARIO
                             session_start();
                             $_SESSION['usuario'] = $usuario;
                             echo '<script> alert("\tBienvenido !");
