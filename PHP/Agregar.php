@@ -1,3 +1,12 @@
+<?php
+require "libs/Seguridad.php";
+$seguridad = new Seguridad();
+
+if ($seguridad->getUsuario()==null){
+    header('Location: ../index.php');
+    exit;
+}
+?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -20,7 +29,6 @@
 
     </style>
 </head>
-<body>
 <body style="background-color: #e6f7ff ">
 <div style="background-color: white">
     <h2>Aqui puedes agregar un equipo.</h2>
@@ -54,7 +62,7 @@
 <hr>
 <?php
 
-require "Conexion.php";
+require "libs/Conexion.php";
 require "Consultas.php";
 
 consultarTodo($conn);

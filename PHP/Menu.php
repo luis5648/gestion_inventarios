@@ -1,3 +1,13 @@
+<?php
+    require "libs/Seguridad.php";
+    $seguridad = new Seguridad();
+
+    if ($seguridad->getUsuario()==null){
+        header('Location: ../index.php');
+        exit;
+    }
+?>
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -49,11 +59,10 @@
 
     </style>
 </head>
-<body>
 <body style="background-color: #d9f2d9">
 <h1>Menú principal</h1>
 <?php
-session_start();
+
 $user = $_SESSION['usuario'];
 echo "Usuario en sesión: ".$user;
 ?>
@@ -81,12 +90,16 @@ echo "Usuario en sesión: ".$user;
 </div>
 <?php
 
-require "Conexion.php";
+require "libs/Conexion.php";
 require "Consultas.php";
 
 consultarTodo($conn);
 
 ?>
+
+    <form action="libs/CerrarSesion.php" method="post">
+        <button>Cerrar Sesión</button>
+    </form>
 
 </body>
 </html>
