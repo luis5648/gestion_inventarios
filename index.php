@@ -52,7 +52,7 @@
 						<button class="login100-form-btn" name="inicioSesion">
 							Iniciar sesión
 						</button>
-                        <p ><a style="color: black;" href="PHP/AgregarUsuarios.php">Agregar nuevos usuarios (Solo administrador)</a></p>
+                        <p ><a style="color: black;" href="PHP/Usuarios/AgregarUsuarios.php">Agregar nuevos usuarios (Solo administrador)</a></p>
 					</div>
 					
 

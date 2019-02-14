@@ -35,6 +35,8 @@
         <button type="submit">Agregar</button>
 
     </form>
-<a href="../index.php" target="" title="Conexion">Regresar</a>
+<a href="../../index.php" target="" title="Conexion">Regresar</a>
+<a href="EliminarUsuarios.php">Eliminar usuarios</a>
+<a href="ModificarUsuarios.php">Modificar usuarios</a>
 </body>
 </html>
