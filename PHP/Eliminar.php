@@ -1,7 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: luis
- * Date: 13/02/2019
- * Time: 12:13 PM
- */
+require "libs/Conexion.php";
+$id = $_GET["id"];
+$consulta = mysqli_query($conn,"DELETE FROM equipos WHERE ID_Equipo = '$id'");
+
+echo "<script>alert('Equipo eliminado correctamente!'); history.back();</script>";
+?>

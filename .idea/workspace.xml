@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d72722-ef17-4e01-81d1-2af92d694e97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PHP/Usuarios/loginAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PHP/libs/CerrarSesion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PHP/libs/Seguridad.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/addItems.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/Agregar.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/Agregar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/Conexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/libs/Conexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/Consultas.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/Consultas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/Eliminar.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/Eliminar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/Menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/Modificar.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/Modificar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/Usuarios/AgregarUsuarios.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/Usuarios/AgregarUsuarios.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/Usuarios/ConsultarUsuarios.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/Usuarios/BuscarUsuarios.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/Usuarios/EliminarUsuarios.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/Usuarios/EliminarUsuarios.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/Usuarios/ModificarUsuarios.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/Usuarios/ModificarUsuarios.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/Usuarios/BuscarUsuarios.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/Usuarios/BuscarUsuarios.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +51,7 @@
         <item name="inventario_ucta@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="inventario_ucta: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="admins: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="propietario: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -61,28 +59,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="85" column="55" lean-forward="true" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/Usuarios/loginAdmin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="60" column="37" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/Menu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-434">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="-50">
+              <caret line="80" column="31" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PHP/libs/Conexion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -99,35 +88,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/Agregar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="64" column="28" lean-forward="true" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+            <state relative-caret-position="790">
+              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/Usuarios/EliminarUsuarios.php">
+        <entry file="file://$PROJECT_DIR$/PHP/Consultas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="238">
+              <caret line="38" column="148" lean-forward="true" selection-start-line="38" selection-start-column="148" selection-end-line="38" selection-end-column="148" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/Usuarios/AgregarUsuarios.php">
+        <entry file="file://$PROJECT_DIR$/PHP/addItems.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="21" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="21" />
+            <state relative-caret-position="382">
+              <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PHP/Eliminar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PHP/Usuarios/BuscarUsuarios.php">
+        <entry file="file://$PROJECT_DIR$/PHP/Modificar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+            <state relative-caret-position="288">
+              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/equipos">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/categoria">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -149,20 +165,23 @@
       <list>
         <option value="$PROJECT_DIR$/PHP/Conexion.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/console.sql" />
-        <option value="$PROJECT_DIR$/PHP/Consultas.php" />
         <option value="$PROJECT_DIR$/css/TablaAll.css" />
         <option value="$PROJECT_DIR$/PHP/AgregarUsuarios.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/PHP/libs/Seguridad.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/PHP/libs/CerrarSesion.php" />
-        <option value="$PROJECT_DIR$/PHP/Agregar.php" />
         <option value="$PROJECT_DIR$/PHP/Usuarios/loginAdmin.php" />
-        <option value="$PROJECT_DIR$/PHP/Usuarios/AgregarUsuarios.php" />
-        <option value="$PROJECT_DIR$/PHP/Menu.php" />
         <option value="$PROJECT_DIR$/PHP/Usuarios/EliminarUsuarios.php" />
         <option value="$PROJECT_DIR$/PHP/Usuarios/ModificarUsuarios.php" />
         <option value="$PROJECT_DIR$/PHP/Usuarios/BuscarUsuarios.php" />
+        <option value="$PROJECT_DIR$/PHP/Usuarios/AgregarUsuarios.php" />
+        <option value="$PROJECT_DIR$/PHP/Menu.php" />
+        <option value="$PROJECT_DIR$/PHP/Agregar.php" />
+        <option value="$PROJECT_DIR$/PHP/Consultas.php" />
+        <option value="$PROJECT_DIR$/PHP/addItems.php" />
+        <option value="$PROJECT_DIR$/PHP/Eliminar.php" />
+        <option value="$PROJECT_DIR$/PHP/Modificar.php" />
       </list>
     </option>
   </component>
@@ -198,6 +217,12 @@
               <item name="inventario_ucta" type="b2602c69:ProjectViewProjectNode" />
               <item name="inventario_ucta" type="462c0819:PsiDirectoryNode" />
               <item name="PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventario_ucta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventario_ucta" type="462c0819:PsiDirectoryNode" />
+              <item name="PHP" type="462c0819:PsiDirectoryNode" />
               <item name="Usuarios" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -214,6 +239,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -250,7 +276,8 @@
       <workItem from="1550012171305" duration="1880000" />
       <workItem from="1549994776461" duration="3033000" />
       <workItem from="1550079142692" duration="9738000" />
-      <workItem from="1550160411342" duration="9978000" />
+      <workItem from="1550160411342" duration="10622000" />
+      <workItem from="1550243993818" duration="12463000" />
     </task>
     <task id="LOCAL-00001" summary="Agregados archivos para crud y modificaciones al menú principal">
       <created>1550088081125</created>
@@ -266,17 +293,23 @@
       <option name="project" value="LOCAL" />
       <updated>1550162923042</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Seguridad agregada, cambios pendientes&#10;Login para administrador añadido">
+      <created>1550184976802</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1550184976802</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24629000" />
+    <option name="totallyTimeSpent" value="37736000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20045386" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20347957" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -326,37 +359,18 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Agregados archivos para crud y modificaciones al menú principal" />
     <MESSAGE value="acciones con usuarios &amp; admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="acciones con usuarios &amp; admin" />
+    <MESSAGE value="Seguridad agregada, cambios pendientes&#10;Login para administrador añadido" />
+    <option name="LAST_COMMIT_MESSAGE" value="Seguridad agregada, cambios pendientes&#10;Login para administrador añadido" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PHP/libs/Conexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="112" selection-start-column="112" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/propietario">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/categoria">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -367,27 +381,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/Eliminar.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/usuarios">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/equipos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/Modificar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -407,64 +404,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="85" column="55" lean-forward="true" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/Consultas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/libs/CerrarSesion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/libs/Seguridad.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        <state relative-caret-position="2040">
+          <caret line="85" column="55" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PHP/Usuarios/loginAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
+        <state relative-caret-position="1440">
           <caret line="60" column="37" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/Agregar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="64" column="28" lean-forward="true" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/Menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-434">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/Usuarios/AgregarUsuarios.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="21" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PHP/Usuarios/EliminarUsuarios.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
+        <state relative-caret-position="528">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/Usuarios/AgregarUsuarios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-194">
+          <caret line="14" column="114" selection-start-line="14" selection-start-column="114" selection-end-line="14" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/Usuarios/BuscarUsuarios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/propietario">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/libs/Seguridad.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/libs/Conexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/categoria">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/equipos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/libs/CerrarSesion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -475,10 +486,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/Usuarios/BuscarUsuarios.php">
+    <entry file="file://$PROJECT_DIR$/PHP/Menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        <state relative-caret-position="-50">
+          <caret line="80" column="31" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/Consultas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="38" column="148" lean-forward="true" selection-start-line="38" selection-start-column="148" selection-end-line="38" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/Agregar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="790">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/addItems.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/Eliminar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/Modificar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
         </state>
       </provider>
     </entry>

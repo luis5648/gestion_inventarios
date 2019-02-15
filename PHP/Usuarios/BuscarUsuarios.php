@@ -2,7 +2,7 @@
 require "../libs/Seguridad.php";
 $seguridad = new Seguridad();
 
-if ($seguridad->getUsuario()==null){
+if ($seguridad->getUsuario() == null) {
     header('Location: ../../index.php');
     exit;
 }
@@ -26,7 +26,7 @@ if ($seguridad->getUsuario()==null){
 
 
 <form action="../libs/CerrarSesion.php">
-    <button class="btn btn-dark" >Cerar Sesión</button>
+    <button class="btn btn-dark">Cerar Sesión</button>
 </form>
 </body>
 </html>

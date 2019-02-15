@@ -2,7 +2,7 @@
 require "../libs/Seguridad.php";
 $seguridad = new Seguridad();
 
-if ($seguridad->getUsuario()==null){
+if ($seguridad->getUsuario() == null) {
     header('Location: ../../index.php');
     exit;
 }
@@ -21,11 +21,12 @@ if ($seguridad->getUsuario()==null){
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
     <style type="text/css">
-        div{
+        div {
 
             background-color: #e6f7ff;
         }
-        button{
+
+        button {
             padding: 10px;
             margin: 20px;
 
@@ -39,17 +40,17 @@ if ($seguridad->getUsuario()==null){
     <h1>Añadir nuevos usuarios</h1>
 </div>
 
-    <form action="" method="post">
-        <p>Nombre del usuario:</p>
-        <input type="text" name="id_equipo">
-        <p>Contraseña:</p>
-        <input type="text" name="modelo">
+<form action="" method="post">
+    <p>Nombre del usuario:</p>
+    <input type="text" name="id_equipo">
+    <p>Contraseña:</p>
+    <input type="text" name="modelo">
 
-        <button class="btn btn-secondary" type="submit">Agregar</button>
+    <button class="btn btn-secondary" type="submit">Agregar</button>
 
-    </form>
+</form>
 <form action="../libs/CerrarSesion.php">
-    <button class="btn btn-dark" >Cerar Sesión</button>
+    <button class="btn btn-dark">Cerar Sesión</button>
 </form>
 <a class="btn btn-danger" href="EliminarUsuarios.php">Eliminar usuarios</a>
 <a class="btn btn-primary" href="ModificarUsuarios.php">Modificar usuarios</a>
