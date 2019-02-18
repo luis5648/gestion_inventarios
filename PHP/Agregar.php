@@ -70,7 +70,7 @@ if ($seguridad->getUsuario() == null) {
 
             echo "<p>Propietario: </p>";
 
-            echo "<input type = 'text' name = 'Propietario' list = 'url_listaP' >";
+            echo "<input name = 'Propietario' list = 'url_listaP' >";
             echo "<datalist id = 'url_listaP' >";
 
             if ($resProp->num_rows > 0) {
