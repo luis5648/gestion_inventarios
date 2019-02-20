@@ -17,6 +17,12 @@ if ($seguridad->getUsuario() == null) {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Agregar equipos</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="../css/TablaAll.css">
     <style type="text/css">
         div {
@@ -30,60 +36,92 @@ if ($seguridad->getUsuario() == null) {
 
         }
 
+
     </style>
 </head>
 <body style="background-color: #e6f7ff ">
 <div style="background-color: white">
-    <h2>Aqui puedes agregar un equipo.</h2>
+    <h2>Agregar equipo.</h2>
 </div>
 <div>
-    <form action="addItems.php" method="post">
-        <p>ID:</p>
-        <input type="text" name="id_equipo">
-        <p>Nombre (Descripción del equipo):</p>
-        <input type="text" name="nombre_equipo">
-        <p>Modelo:</p>
-        <input type="text" name="modelo">
-        <p>Marca:</p>
-        <input type="text" name="marca">
-        <p>No. serie:</p>
-        <input type="text" name="no_serie">
-        <p>Ubicacion:</p> <input type="text" name="ubicacion">
+    <form action="addItems.php" method="post" style="Margin: 2%">
 
-        <p>Categoria: </p>
-        <input type="text" name="Categoria" list="url_listaC">
-        <datalist id="url_listaC">
-            <?php
+        <div class="form-group">
+            <label class="form-control" style="background-color: #e6f7ff ">ID: </label>
+            <input type="text" name="id_equipo" class="form-control" required>
+        </div>
 
-            $sqlCat = "SELECT Nombre_Categoria FROM categoria";
-            $sqlProp = "SELECT Nombre_Propietario FROM propietario";
+        <div class="form-group">
+            <label class="form-control" style="background-color: #e6f7ff ">Nombre (Descripción del equipo):</label>
+            <input type="text" name="nombre_equipo" class="form-control" required><br>
+        </div>
 
-            $resProp = $conn->query($sqlProp);
-            $resCat = $conn->query($sqlCat);
+        <div class="form-group">
+            <label class="form-control" style="background-color: #e6f7ff ">Modelo: </label>
+            <input type="text" name="modelo" class="form-control">
+        </div>
 
-            if ($resCat->num_rows > 0) {
-                while ($cat = $resCat->fetch_assoc()) {
-                    echo "<option label=" . $cat["Nombre_Categoria"] . " value=" . $cat["Nombre_Categoria"] . "></option>";
+        <div class="form-group">
+            <label class="form-control" style="background-color: #e6f7ff ">Marca: </label>
+            <input type="text" name="marca" class="form-control" required><br>
+        </div>
+
+        <div class="form-group">
+            <label class="form-control" style="background-color: #e6f7ff ">Número de serie: </label>
+            <input type="text" name="no_serie" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label class="form-control" style="background-color: #e6f7ff ">Ubicación: </label>
+            <input type="text" name="ubicacion" class="form-control"><br>
+        </div>
+
+        <div class="form-group">
+            <label for="Prop" class="form-control" style="background-color: #e6f7ff ">Nombre del propietario: </label>
+            <select name="BuscaPropietario" class="form-control">
+                <?php
+                $qProp = "SELECT Nombre_Propietario FROM propietario";
+                $res = $conn->query($qProp);
+
+                if ($res->num_rows > 0) {
+                    while ($filas = $res->fetch_assoc()) {
+                        echo "<option value=" . $filas["Nombre_Propietario"] . ">" . $filas["Nombre_Propietario"] . "</option>";
+                    }
+
+
                 }
-            }
-            echo "</datalist>";
 
-            echo "<p>Propietario: </p>";
+                ?>
+            </select>
+        </div>
+        <br>
+        <div class="form-group" >
+            <label for="" class="form-control" style="background-color: #e6f7ff ">Categoría</label>
+            <select name="BuscaCategoria" id="" class="form-control">
+                <?php
+                $qCat = "SELECT Nombre_Categoria FROM categoria";
+                $res = $conn->query($qCat);
 
-            echo "<input name = 'Propietario' list = 'url_listaP' >";
-            echo "<datalist id = 'url_listaP' >";
+                if ($res->num_rows > 0) {
+                    while ($filas = $res->fetch_assoc()) {
+                        echo "<option value=" . $filas["Nombre_Categoria"] . ">" . $filas["Nombre_Categoria"] . "</option>";
+                    }
 
-            if ($resProp->num_rows > 0) {
-                while ($prop = $resProp->fetch_assoc()) {
-                    echo "<option label=" . $prop["Nombre_Propietario"] . " value=" . $prop["Nombre_Propietario"] . "></option>";
+
                 }
-            }
-            echo "</datalist>";
-            ?>
-            <button>Agregar</button>
+
+                ?>
+            </select>
+        </div>
+
+        <div style="text-align: center;">
+            <button class="btn btn-success">Agregar</button>
+            <a href="Menu.php" class="btn btn-secondary">Regresar</a>
+        </div>
+
     </form>
 
-    <button><a href="D:\crud.html" target="" title="Conexion"></a>Regresar</button>
+
 </div>
 <hr>
 <?php

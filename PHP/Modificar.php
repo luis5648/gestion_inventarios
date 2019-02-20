@@ -26,6 +26,11 @@ $filas = $res->fetch_assoc();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/TablaAll.css">
     <title>Modificar equipo</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 <form action="" method="post">
@@ -74,9 +79,13 @@ $filas = $res->fetch_assoc();
         }
         echo "</datalist>";
 
-        echo "<button name='Actualizar'>Actualizar</button>";
+        echo "<br><br><button class='btn btn-secondary' name='Actualizar'>Actualizar</button>";
         ?>
+        <a href="Menu.php" class="btn btn-success">Regresar</a>
 </form>
+
+
+
 <?php
 require "Consultas.php";
 //consultas para actualización
@@ -102,7 +111,7 @@ if (isset($_POST["Actualizar"])) {
                    Ubicacion='$ubNuev', ID_Categoria='$c[ID_Categoria]',ID_Propietario='$p[ID_Propietario]' WHERE ID_Equipo = '$id'";
 
     if (!$conn->query($sqlActualizar)) {
-        echo "<script>alert('Hubo un error al actualizar');</script>";
+        echo "<script>alert('Hubo un error al actualizar. ¿Ha olvidado llenar algún campo? ');</script>";
 
     } else {
         echo "<script>alert('Equipo Actualizado!');</script>";

@@ -71,14 +71,14 @@ echo "Usuario en sesión: ".$user;
     <div class="dropdown" >
         <button class="dropbt">Agregar</button>
         <div class="dropcont">
-            <a href="Agregar.php" target="_blank">Agregar equipo</a>
+            <a href="Agregar.php">Agregar equipo</a>
         </div>
     </div>
 
     <div class="dropdown" >
         <button class="dropbt">Buscar</button>
         <div class="dropcont">
-            <a href="Buscar.php" target="_blank">Buscar Equipo</a>
+            <a href="Buscar.php" >Buscar Equipo</a>
         </div>
     </div>
 
