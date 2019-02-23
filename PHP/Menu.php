@@ -64,6 +64,7 @@
 <?php
 
 $user = $_SESSION['usuario'];
+
 $hora = time();
 echo "Usuario en sesión: \n".$user;
 ?>
@@ -72,7 +73,7 @@ echo "Usuario en sesión: \n".$user;
     <div class="dropdown" >
         <button class="dropbt">Agregar</button>
         <div class="dropcont">
-            <a href="Agregar.php">Agregar equipo</a>
+            <a href="AgregarEquipos.php">Agregar equipo</a>
         </div>
     </div>
 

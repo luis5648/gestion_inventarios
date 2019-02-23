@@ -33,61 +33,79 @@ $filas = $res->fetch_assoc();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<form action="" method="post">
-    <p>ID:</p>
-    <input type="text" name="id_equipo" value="<?php echo $filas["ID_Equipo"]; ?>">
-    <p>Nombre (Descripción del equipo):</p>
-    <input type="text" name="nombre_equipo" value="<?php echo $filas["Nombre_Equipo"]; ?>">
-    <p>Modelo:</p>
-    <input type="text" name="modelo" value="<?php echo $filas["Modelo"]; ?>">
-    <p>Marca:</p>
-    <input type="text" name="marca" value="<?php echo $filas["Marca"]; ?>">
-    <p>No. serie:</p>
-    <input type="text" name="no_serie" value="<?php echo $filas["N_serie"]; ?>">
-    <p>Ubicacion:</p>
-    <input type="text" name="ubicacion" value="<?php echo $filas["Ubicacion"]; ?>">
+<h3 style="margin-left: 5%; margin-top: 2%">Modificar Equipo</h3>
+<form action="" method="post" style="padding: 10%;text-align: center;" class="form-group">
+    <label for="" class="form-control" style="background-color: #e6f7ff ">ID Equipo</label>
+    <input required type="text" name="id_equipo" class="form-control" value="<?php echo $filas["ID_Equipo"]; ?>"><br>
 
-    <p>Categoria: </p>
-    <input type="text" name="Categoria" list="url_listaC">
-    <datalist id="url_listaC">
+    <label class="form-control" style="background-color: #e6f7ff ">Nombre (Descripción del equipo):</label>
+    <input required type="text" class="form-control" name="nombre_equipo"
+           value="<?php echo $filas["Nombre_Equipo"]; ?>"><br>
+
+    <label class="form-control" style="background-color: #e6f7ff ">Modelo:</label>
+    <input required type="text" name="modelo" class="form-control" value="<?php echo $filas["Modelo"]; ?>"><br>
+
+    <label class="form-control" style="background-color: #e6f7ff ">Marca:</label>
+    <input required type="text" class="form-control" name="marca" value="<?php echo $filas["Marca"]; ?>"><br>
+
+    <label class="form-control" style="background-color: #e6f7ff ">No. serie:</label>
+    <input required class="form-control" type="text" name="no_serie"
+           onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+           value="<?php echo $filas["N_serie"]; ?>"><br>
+
+    <label class="form-control" style="background-color: #e6f7ff ">Ubicacion:</label>
+    <input required class="form-control" type="text" name="ubicacion" value="<?php echo $filas["Ubicacion"]; ?>"><br>
+
+    <label class="form-control" style="background-color: #e6f7ff ">Nombre del propietario: </label>
+    <select name="BuscaPropietario" id="SelProp" class="form-control">
         <?php
+        $qProp = "SELECT Nombre_Propietario FROM propietario";
+        $res = $conn->query($qProp);
 
-        $sqlCat = "SELECT Nombre_Categoria FROM categoria";
-        $sqlProp = "SELECT Nombre_Propietario FROM propietario";
+        if ($res->num_rows > 0) {
+            while ($filas = $res->fetch_assoc()) {
 
-        $resProp = $conn->query($sqlProp);
-        $resCat = $conn->query($sqlCat);
+                echo "<option value='$filas[Nombre_Propietario]'> $filas[Nombre_Propietario]</option>";
 
-        if ($resCat->num_rows > 0) {
-            while ($cat = $resCat->fetch_assoc()) {
-                echo "<option label=" . $cat["Nombre_Categoria"] . " value=" .
-                    $cat["Nombre_Categoria"] . "></option>";
             }
+
+
         }
-        echo "</datalist>";
 
-        echo "<p>Propietario: </p>";
+        ?>
+    </select>
 
-        echo "<input type = 'text' name = 'Propietario' list = 'url_listaP' >";
-        echo "<datalist id = 'url_listaP' >";
+    <br>
 
-        if ($resProp->num_rows > 0) {
-            while ($prop = $resProp->fetch_assoc()) {
-                echo "<option label=" . $prop["Nombre_Propietario"] . " value=" .
-                    $prop["Nombre_Propietario"] . "></option>";
+    <label for="" class="form-control" style="background-color: #e6f7ff ">Categoría</label>
+    <select name="BuscaCategoria" id="SelCategoria" class="form-control">
+        <?php
+        $qCat = "SELECT Nombre_Categoria FROM categoria";
+        $res = $conn->query($qCat);
+
+        if ($res->num_rows > 0) {
+            while ($filas = $res->fetch_assoc()) {
+
+                echo "<option value='$filas[Nombre_Categoria]'> $filas[Nombre_Categoria]</option>";
             }
+
+
         }
-        echo "</datalist>";
+
+
+        echo "</select>";
 
         echo "<br><br><button class='btn btn-secondary' name='Actualizar'>Actualizar</button>";
         ?>
         <a href="Menu.php" class="btn btn-success">Regresar</a>
-</form>
 
+</form>
 
 
 <?php
 require "Consultas.php";
+
+
 //consultas para actualización
 if (isset($_POST["Actualizar"])) {
     $idNuev = $_POST["id_equipo"];
@@ -96,28 +114,30 @@ if (isset($_POST["Actualizar"])) {
     $marcNuev = $_POST["marca"];
     $serNuev = $_POST["no_serie"];
     $ubNuev = $_POST["ubicacion"];
-    $nuevCat = $_POST["Categoria"];
-    $nuevProp = $_POST["Propietario"];
-
-    $numCat = "SELECT ID_Categoria FROM categoria WHERE Nombre_Categoria ='$nuevCat'";
-    $numPropt = "SELECT ID_Propietario FROM propietario WHERE Nombre_Propietario ='$nuevProp'";
-
-    $c = ($conn->query($numCat))->fetch_assoc();
-    $p = ($conn->query($numPropt)->fetch_assoc());
+    $nuevCat = $_POST["BuscaCategoria"];
+    $nuevProp = $_POST["BuscaPropietario"];
 
 
+    //validación de las llaves foraneas
+    $numCat = mysqli_query($conn, "SELECT ID_Categoria FROM categoria WHERE Nombre_Categoria ='$nuevCat'");
+    $numPropt = mysqli_query($conn, "SELECT ID_Propietario FROM propietario WHERE Nombre_Propietario ='$nuevProp'");
+
+    $c = $numCat->fetch_assoc();
+    $p = $numPropt->fetch_assoc();
+
+
+//actualización de datos
     $sqlActualizar = "UPDATE equipos SET ID_Equipo='$idNuev', Nombre_Equipo='$nombNuev',
                    Modelo='$modNuev', Marca='$marcNuev', N_serie='$serNuev',
                    Ubicacion='$ubNuev', ID_Categoria='$c[ID_Categoria]',ID_Propietario='$p[ID_Propietario]' WHERE ID_Equipo = '$id'";
 
     if (!$conn->query($sqlActualizar)) {
-        echo "<script>alert('Hubo un error al actualizar. ¿Ha olvidado llenar algún campo? ');</script>";
+        echo "<script>alert('Hubo un error al actualizar.');</script>";
 
     } else {
         echo "<script>alert('Equipo Actualizado!');</script>";
     }
 }
-
 consultarSinAcciones($conn);
 
 ?>

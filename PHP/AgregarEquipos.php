@@ -44,7 +44,7 @@ if ($seguridad->getUsuario() == null) {
     <h2>Agregar equipo.</h2>
 </div>
 <div>
-    <form action="addItems.php" method="post" style="Margin: 2%">
+    <form action="" method="post" style="Margin: 2%; padding: 10%;text-align: center">
 
         <div class="form-group">
             <label class="form-control" style="background-color: #e6f7ff ">ID: </label>
@@ -58,7 +58,7 @@ if ($seguridad->getUsuario() == null) {
 
         <div class="form-group">
             <label class="form-control" style="background-color: #e6f7ff ">Modelo: </label>
-            <input type="text" name="modelo" class="form-control">
+            <input type="text" name="modelo" class="form-control" required>
         </div>
 
         <div class="form-group">
@@ -68,12 +68,12 @@ if ($seguridad->getUsuario() == null) {
 
         <div class="form-group">
             <label class="form-control" style="background-color: #e6f7ff ">Número de serie: </label>
-            <input type="text" name="no_serie" class="form-control">
+            <input type="text" name="no_serie" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
         </div>
 
         <div class="form-group">
             <label class="form-control" style="background-color: #e6f7ff ">Ubicación: </label>
-            <input type="text" name="ubicacion" class="form-control"><br>
+            <input type="text" name="ubicacion" class="form-control" required><br>
         </div>
 
         <div class="form-group">
@@ -85,7 +85,7 @@ if ($seguridad->getUsuario() == null) {
 
                 if ($res->num_rows > 0) {
                     while ($filas = $res->fetch_assoc()) {
-                        echo "<option value=" . $filas["Nombre_Propietario"] . ">" . $filas["Nombre_Propietario"] . "</option>";
+                        echo "<option value='$filas[Nombre_Propietario]'> $filas[Nombre_Propietario]</option>";
                     }
 
 
@@ -105,7 +105,7 @@ if ($seguridad->getUsuario() == null) {
 
                 if ($res->num_rows > 0) {
                     while ($filas = $res->fetch_assoc()) {
-                        echo "<option value=" . $filas["Nombre_Categoria"] . ">" . $filas["Nombre_Categoria"] . "</option>";
+                        echo "<option value='$filas[Nombre_Categoria]'> $filas[Nombre_Categoria]</option>";
                     }
 
 
@@ -116,7 +116,7 @@ if ($seguridad->getUsuario() == null) {
         </div>
 
         <div style="text-align: center;">
-            <button class="btn btn-success">Agregar</button>
+            <button class="btn btn-success" name="addI">Agregar</button>
             <a href="Menu.php" class="btn btn-secondary">Regresar</a>
         </div>
 
@@ -127,9 +127,51 @@ if ($seguridad->getUsuario() == null) {
 <hr>
 <?php
 
+if (isset($_POST["addI"])){
+    $iDequipo = $_POST["id_equipo"];
+    $nombreEquipo = $_POST["nombre_equipo"];
+    $modeloEquipo = $_POST["modelo"];
+    $serieEquipo = $_POST["no_serie"];
+    $marcaEquipo = $_POST["marca"];
+    $ubicacionEquipo = $_POST["ubicacion"];
+    $categoriaEquipo = $_POST["BuscaCategoria"];
+    $propieterioEquipo = $_POST["BuscaPropietario"];
 
+
+//validación de existencia de datos para no repetirlos
+    $val = mysqli_query($conn, "SELECT * FROM equipos");
+
+    while ($valRow = $val->fetch_assoc()) {
+        if ($valRow["ID_Equipo"] == $iDequipo || $valRow["N_serie"] == $serieEquipo) {
+            echo "<script>alert('El ID o Número de serie ya están registrados en otro equipo!');</script>";
+
+        } else {
+            //Validaciones para insertar llaves foraneas
+            $cat = "SELECT ID_Categoria FROM categoria where Nombre_Categoria = '$categoriaEquipo'";
+            $prop = "SELECT ID_Propietario FROM propietario where Nombre_Propietario = '$propieterioEquipo'";
+
+            $res1 = $conn->query($cat);
+            $res2 = $conn->query($prop);
+
+            $catDat = $res1->fetch_assoc();
+            $propDat = $res2->fetch_assoc();
+
+            $n1 = $catDat["ID_Categoria"];
+            $n2 = $propDat["ID_Propietario"];
+
+//inserción de datos a la tabla de los equipos con id's foraneos correspondientes.
+            $sqlNuevoEquipo = "INSERT INTO equipos(ID_Equipo, Modelo, N_serie, Ubicacion, Marca, Nombre_Equipo, ID_Categoria, ID_Propietario)  VALUES ('$iDequipo','$modeloEquipo','$serieEquipo','$ubicacionEquipo','$marcaEquipo','$nombreEquipo','$n1','$n2') ";
+
+            if ($conn->query($sqlNuevoEquipo) === TRUE) {
+                echo "<script>alert('Nuevo equipo agregado!');</script>";
+
+            }
+        }
+
+    }
+
+}
 consultarTodo($conn);
-
 ?>
 </body>
 </html>

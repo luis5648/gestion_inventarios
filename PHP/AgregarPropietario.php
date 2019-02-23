@@ -31,7 +31,7 @@
         <button class="btn btn-success" name="agregarP">Agregar</button>
     </div>
 
-    <a href="Agregar.php" class="btn btn-secondary">Regresar</a>
+    <a href="AgregarEquipos.php" class="btn btn-secondary">Regresar</a>
 
 
 
@@ -45,6 +45,17 @@ if (isset($_POST["agregarP"])){
     $nombreP = $_POST["NombrePropietario"];
     $telefonoP = $_POST["TelefonoPropietario"];
     $aulaP = $_POST["AulaPropietario"];
+
+    //validación de existencia de datos en la db
+    $sqlVal = mysqli_query($conn,"SELECT * FROM propietario");
+    while ($sqlVal->fetch_assoc()){
+        if ($nombreP ==$sqlVal["Nombre_Propietario"] || $telefonoP==$sqlVal["Telefono"]){
+            echo "<script>alert('El nombre o teléfono del propietario ya están registrados!')</script>>";
+        }
+    }
+
+
+
 
 
     $insertarP = mysqli_query($conn,"INSERT INTO propietario (nombre_propietario, telefono, aula) VALUES ('$nombreP','$telefonoP','$aulaP') ");

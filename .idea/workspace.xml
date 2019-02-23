@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d72722-ef17-4e01-81d1-2af92d694e97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PHP/AgregarPropietario.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/Agregar.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/Agregar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/Buscar.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/Buscar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/Consultas.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/Consultas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/Agregar.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/AgregarEquipos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/AgregarPropietario.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/AgregarPropietario.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/Menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/Modificar.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/Modificar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/addItems.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,53 +59,49 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/Consultas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4356">
+            <state relative-caret-position="4928">
               <caret line="203" column="20" selection-start-line="203" selection-start-column="20" selection-end-line="203" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/Menu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
+            <state relative-caret-position="-49">
+              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/propietario">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/addItems.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PHP/Modificar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+            <state relative-caret-position="242">
+              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+              <folding>
+                <element signature="n#style#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#2;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#3;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#4;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#5;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#7;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/Eliminar.php">
+        <entry file="file://$PROJECT_DIR$/PHP/AgregarEquipos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="82" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/Agregar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="95" selection-start-line="20" selection-start-column="4" selection-end-line="23" selection-end-column="95" />
+            <state relative-caret-position="2702">
+              <caret line="167" column="13" selection-start-line="167" selection-start-column="13" selection-end-line="167" selection-end-column="13" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/AgregarPropietario.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+            <state relative-caret-position="216">
+              <caret line="52" column="90" selection-start-line="52" selection-start-column="90" selection-end-line="52" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -144,7 +140,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/PHP/Conexion.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/console.sql" />
         <option value="$PROJECT_DIR$/PHP/AgregarUsuarios.php" />
         <option value="$PROJECT_DIR$/PHP/libs/Seguridad.php" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -154,18 +149,20 @@
         <option value="$PROJECT_DIR$/PHP/Usuarios/ModificarUsuarios.php" />
         <option value="$PROJECT_DIR$/PHP/Usuarios/BuscarUsuarios.php" />
         <option value="$PROJECT_DIR$/PHP/Usuarios/AgregarUsuarios.php" />
-        <option value="$PROJECT_DIR$/PHP/addItems.php" />
         <option value="$PROJECT_DIR$/PHP/Eliminar.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/PHP/modItems.php" />
-        <option value="$PROJECT_DIR$/PHP/Modificar.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/css/TablaAll.css" />
         <option value="$PROJECT_DIR$/PHP/Buscar.php" />
         <option value="$PROJECT_DIR$/PHP/Agregar.php" />
-        <option value="$PROJECT_DIR$/PHP/AgregarPropietario.php" />
         <option value="$PROJECT_DIR$/PHP/Consultas.php" />
         <option value="$PROJECT_DIR$/PHP/Menu.php" />
+        <option value="$PROJECT_DIR$/PHP/addItems.php" />
+        <option value="$PROJECT_DIR$/PHP/AgregarPropietario.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/console.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/PHP/AgregarEquipos.php" />
+        <option value="$PROJECT_DIR$/PHP/Modificar.php" />
       </list>
     </option>
   </component>
@@ -201,6 +198,12 @@
               <item name="inventario_ucta" type="b2602c69:ProjectViewProjectNode" />
               <item name="inventario_ucta" type="462c0819:PsiDirectoryNode" />
               <item name="PHP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventario_ucta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventario_ucta" type="462c0819:PsiDirectoryNode" />
+              <item name="PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -266,7 +269,7 @@
       <workItem from="1550681919685" duration="7086000" />
       <workItem from="1550770413162" duration="1844000" />
       <workItem from="1550876509640" duration="2281000" />
-      <workItem from="1550948197484" duration="516000" />
+      <workItem from="1550948197484" duration="19247000" />
     </task>
     <task id="LOCAL-00001" summary="Agregados archivos para crud y modificaciones al menú principal">
       <created>1550088081125</created>
@@ -310,27 +313,34 @@
       <option name="project" value="LOCAL" />
       <updated>1550638005949</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Modificaciones en la ventana de agregar equipo y agregar propietario">
+      <created>1550948845276</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1550948845276</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83113000" />
+    <option name="totallyTimeSpent" value="101844000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="732" extended-state="7" />
+    <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15332326" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.15332326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Console" order="7" weight="0.329582" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.32899022" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.329582" />
@@ -340,20 +350,20 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.27265862" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.27265862" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14652568" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15332326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Console" order="7" weight="0.329582" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="7" visible="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.329582" />
@@ -378,16 +388,10 @@
     <MESSAGE value="eliminar y agregar usuarios completo, validaciones de campos pendientes" />
     <MESSAGE value="Acción de modificar completa" />
     <MESSAGE value="htaccess, buscar completo y correcciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="htaccess, buscar completo y correcciones" />
+    <MESSAGE value="Modificaciones en la ventana de agregar equipo y agregar propietario" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificaciones en la ventana de agregar equipo y agregar propietario" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="112" selection-start-column="112" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/usuarios">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -438,31 +442,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/categoria">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/libs/Seguridad.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/admins">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/Modificar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -501,27 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/Consultas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4356">
-          <caret line="203" column="20" selection-start-line="203" selection-start-column="20" selection-end-line="203" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/propietario">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/addItems.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP/Eliminar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -529,17 +491,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/Agregar.php">
+    <entry file="file://$PROJECT_DIR$/PHP/addItems.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="95" selection-start-line="20" selection-start-column="4" selection-end-line="23" selection-end-column="95" />
+        <state relative-caret-position="88">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/categoria">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PHP/AgregarPropietario.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+        <state relative-caret-position="216">
+          <caret line="52" column="90" selection-start-line="52" selection-start-column="90" selection-end-line="52" selection-end-column="90" />
         </state>
       </provider>
     </entry>
@@ -550,10 +519,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/propietario">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="75" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/libs/Seguridad.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/Consultas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4928">
+          <caret line="203" column="20" selection-start-line="203" selection-start-column="20" selection-end-line="203" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PHP/Menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
+        <state relative-caret-position="-49">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/AgregarEquipos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2702">
+          <caret line="167" column="13" selection-start-line="167" selection-start-column="13" selection-end-line="167" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/Modificar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#2;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#3;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#4;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#5;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#7;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
