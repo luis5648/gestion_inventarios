@@ -12,24 +12,30 @@ require "libs/Conexion.php";
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Busquedas</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
 </head>
-<body>
+<body style="background-color: aquamarine">
 
-<div style="text-align: center;">
+<div style="text-align: center; padding-left: 6%; padding-top: 5%; ">
 
 
-    <form action="" method="post" style=" float: left; width: 30%">
+    <form action="" method="post" style=" float: left; width: 30%; border: solid black; padding-bottom: 2%">
         <h3>Buscar por ID de equipo</h3>
         <br><br>
 
         <label for="ID">ID: </label>
         <input id="ID" type="text" name="ID_Equipo" required>
 
-        <button name="buscaID">Buscar</button>
+        <button name="buscaID" class="btn btn-success">Buscar</button>
 
     </form>
 
-    <form action="" style=" float: left; width: 30%" method="post">
+    <form action="" style=" float: left; width: 30%; border: solid black; padding-bottom: 2%" method="post">
         <h3>Buscar por propietario</h3>
         <br><br>
         <label for="Prop">Nombre del propietario: </label>
@@ -49,12 +55,12 @@ require "libs/Conexion.php";
             ?>
         </select>
 
-        <button name="buscaP">Buscar</button>
+        <button name="buscaP" class="btn btn-success">Buscar</button>
 
 
     </form>
 
-    <form action="" style="width: 30%; float: left;" method="post">
+    <form action="" style="width: 30%; float: left; border: solid black; padding-bottom: 2%" method="post" >
         <h3>buscar por categoría</h3>
         <br><br>
 
@@ -75,7 +81,7 @@ require "libs/Conexion.php";
             ?>
         </select>
 
-        <button name="BuscaC">Buscar</button>
+        <button name="BuscaC" class="btn btn-success">Buscar</button>
 
     </form>
 </div>
@@ -102,6 +108,7 @@ if (isset($_POST["buscaID"])) {
 
 ?>
 
+<a href="Menu.php" class="btn btn-secondary">Regresar</a>
 
 </body>
 </html>

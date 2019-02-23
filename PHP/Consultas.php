@@ -183,3 +183,23 @@ function buscarPropietario($conn, $condicion)
 
     echo "</table>";
 }
+
+function ConsultarPropietarios($conn){
+    $sqlP = "SELECT * FROM propietario";
+    $res = $conn->query($sqlP);
+
+
+    echo "<h6><h6>";
+    echo "<table><tr><th>ID del propietario</th><th>Nombre</th><th>Telefono</th><th>Aula</th></tr>";
+    if ($res->num_rows > 0) {
+        while ($fila = $res->fetch_assoc()) {
+            echo "<tr><td>" . $fila["ID_Propietario"] . "</td>";
+            echo "<td>" . $fila["Nombre_Propietario"] . "</td>";
+            echo "<td>" . $fila["Telefono"] . "</td>";
+            echo "<td>" . $fila["Aula"] . "</td></tr>";
+
+        }
+    }
+
+    echo "</table>";
+}

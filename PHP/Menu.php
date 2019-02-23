@@ -64,7 +64,8 @@
 <?php
 
 $user = $_SESSION['usuario'];
-echo "Usuario en sesión: ".$user;
+$hora = time();
+echo "Usuario en sesión: \n".$user;
 ?>
 <div style="background-color: white">
 
