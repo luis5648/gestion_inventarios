@@ -45,30 +45,33 @@ if (isset($_POST["agregarP"])) {
     $telefonoP = $_POST["TelefonoPropietario"];
     $aulaP = $_POST["AulaPropietario"];
 
-    $hayDatos = TRUE;
+
 
     //validación de existencia de datos en la db
-    $sqlVal = mysqli_query($conn, "SELECT * FROM propietario");
+    $sqlVal = mysqli_query($conn, "SELECT * FROM propietario WHERE Nombre_Propietario = '$nombreP' OR Telefono= '$telefonoP'" );
 
 
-    while ($filas = $sqlVal->fetch_assoc()) {
-        if ($filas["Nombre_Propietario"] != $nombreP || $filas["Telefono"] != $telefonoP) {
-            $hayDatos = FALSE;
+
+        if (!$sqlVal->num_rows>0) {
+            $sqlInP = "INSERT INTO propietario (Nombre_Propietario, Telefono, Aula) VALUES ('$nombreP','$telefonoP','$aulaP')";
+            if ($conn->query($sqlInP) === TRUE) {
+
+                echo "<script>alert('Propietario añadido correctamente!');</script>";
+            }
+
         } else {
-            $hayDatos = TRUE;
-        }
-    }
 
-    if ($hayDatos===FALSE){
-        $sqlInP = "INSERT INTO propietario (Nombre_Propietario, Telefono, Aula) VALUES ('$nombreP','$telefonoP','$aulaP')";
+                    echo "<script>alert('El nombre o teléfono del propietario ya están registrados!');</script>";
+                }
 
-        if ($conn->query($sqlInP) === TRUE) {
-            echo "<script>alert('Propietario añadido correctamente!');</script>";
-            exit;
-        }
-    }else{
-        echo "<script>alert('El nombre o teléfono del propietario ya están registrados!');</script>";
-    }
+
+
+
+
+
+
+
+
 
 
 }

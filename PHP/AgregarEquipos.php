@@ -139,13 +139,14 @@ if (isset($_POST["addI"])){
 
 
 //validación de existencia de datos para no repetirlos
-    $val = mysqli_query($conn, "SELECT * FROM equipos");
+    $val = mysqli_query($conn, "SELECT * FROM equipos WHERE ID_Equipo = '$iDequipo'");
 
-    while ($valRow = $val->fetch_assoc()) {
-        if ($valRow["ID_Equipo"] == $iDequipo || $valRow["N_serie"] == $serieEquipo) {
-            echo "<script>alert('El ID o Número de serie ya están registrados en otro equipo!');</script>";
+
+        if ($val->num_rows>0) {
+            echo "<script>alert('El ID está registrado en otro equipo!');</script>";
 
         } else {
+
             //Validaciones para insertar llaves foraneas
             $cat = "SELECT ID_Categoria FROM categoria where Nombre_Categoria = '$categoriaEquipo'";
             $prop = "SELECT ID_Propietario FROM propietario where Nombre_Propietario = '$propieterioEquipo'";
@@ -166,7 +167,7 @@ if (isset($_POST["addI"])){
                 echo "<script>alert('Nuevo equipo agregado!');</script>";
 
             }
-        }
+
 
     }
 
