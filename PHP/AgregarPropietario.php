@@ -24,8 +24,8 @@
         <label for="" class="form-control">Telefono: </label>
         <input type="text" class="form-control" name="TelefonoPropietario">
         <br>
-        <label for="" class="form-control" >Aula: </label>
-        <input type="text" name="AulaPropietario" class="form-control"  required>
+        <label for="" class="form-control">Aula: </label>
+        <input type="text" name="AulaPropietario" class="form-control" required>
         <br>
 
         <button class="btn btn-success" name="agregarP">Agregar</button>
@@ -34,42 +34,48 @@
     <a href="AgregarEquipos.php" class="btn btn-secondary">Regresar</a>
 
 
-
 </form>
 
 <?php
 require "libs/Conexion.php";
 require "Consultas.php";
 
-if (isset($_POST["agregarP"])){
+if (isset($_POST["agregarP"])) {
     $nombreP = $_POST["NombrePropietario"];
     $telefonoP = $_POST["TelefonoPropietario"];
     $aulaP = $_POST["AulaPropietario"];
 
+    $hayDatos = TRUE;
+
     //validación de existencia de datos en la db
-    $sqlVal = mysqli_query($conn,"SELECT * FROM propietario");
-    while ($sqlVal->fetch_assoc()){
-        if ($nombreP ==$sqlVal["Nombre_Propietario"] || $telefonoP==$sqlVal["Telefono"]){
-            echo "<script>alert('El nombre o teléfono del propietario ya están registrados!')</script>>";
+    $sqlVal = mysqli_query($conn, "SELECT * FROM propietario");
+
+
+    while ($filas = $sqlVal->fetch_assoc()) {
+        if ($filas["Nombre_Propietario"] != $nombreP || $filas["Telefono"] != $telefonoP) {
+            $hayDatos = FALSE;
+        } else {
+            $hayDatos = TRUE;
         }
     }
 
+    if ($hayDatos===FALSE){
+        $sqlInP = "INSERT INTO propietario (Nombre_Propietario, Telefono, Aula) VALUES ('$nombreP','$telefonoP','$aulaP')";
 
-
-
-
-    $insertarP = mysqli_query($conn,"INSERT INTO propietario (nombre_propietario, telefono, aula) VALUES ('$nombreP','$telefonoP','$aulaP') ");
-
-    if (!$insertarP){
-        echo "<script>alert('Hubo un error al insertar los datos')</script>>";
+        if ($conn->query($sqlInP) === TRUE) {
+            echo "<script>alert('Propietario añadido correctamente!');</script>";
+            exit;
+        }
     }else{
-        echo "<script>alert('Propietario añadido correctamente!')</script>>";
+        echo "<script>alert('El nombre o teléfono del propietario ya están registrados!');</script>";
     }
-    exit();
+
+
 }
 
 ConsultarPropietarios($conn);
 echo "<br>";
+
 ?>
 
 </body>
