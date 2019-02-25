@@ -2,11 +2,129 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d72722-ef17-4e01-81d1-2af92d694e97" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9.corrupted.20190224-030245.reason.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9.corrupted.20190224-030245.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/LogoCTA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/ModEquipos/ModEquiposPlantilla.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/ModEquipos/reporteModEquipos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/FAQ.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/changelog.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/__construct.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/acceptpagebreak.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/addfont.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/addlink.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/addpage.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/aliasnbpages.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/cell.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/close.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/error.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/footer.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/getpageheight.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/getpagewidth.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/getstringwidth.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/getx.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/gety.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/header.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/image.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/line.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/link.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/ln.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/multicell.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/output.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/pageno.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/rect.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setauthor.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setautopagebreak.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setcompression.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setcreator.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setdisplaymode.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setdrawcolor.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setfillcolor.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setfont.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setfontsize.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setkeywords.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setleftmargin.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setlinewidth.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setlink.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setmargins.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setrightmargin.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setsubject.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/settextcolor.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/settitle.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/settopmargin.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setx.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/setxy.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/sety.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/text.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/doc/write.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/font/courier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/font/courierb.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/font/courierbi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/font/courieri.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/font/helvetica.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/font/helveticab.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/font/helveticabi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/font/helveticai.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/font/symbol.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/font/times.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/font/timesb.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/font/timesbi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/font/timesi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/font/zapfdingbats.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/fpdf.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/fpdf.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/install.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/license.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/cp1250.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/cp1251.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/cp1252.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/cp1253.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/cp1254.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/cp1255.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/cp1257.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/cp1258.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/cp874.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/iso-8859-1.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/iso-8859-11.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/iso-8859-15.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/iso-8859-16.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/iso-8859-2.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/iso-8859-4.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/iso-8859-5.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/iso-8859-7.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/iso-8859-9.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/koi8-r.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/koi8-u.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/makefont.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/makefont/ttfparser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/20k_c1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/20k_c2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/calligra.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/calligra.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/calligra.z" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/countries.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/makefont.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/tuto1.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/tuto1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/tuto2.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/tuto2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/tuto3.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/tuto3.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/tuto4.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/tuto4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/tuto5.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/tuto5.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/tuto6.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/tuto6.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/tuto7.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/reportes/fpdf/tutorial/tuto7.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/AgregarEquipos.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/AgregarEquipos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/AgregarPropietario.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/AgregarPropietario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/libs/Conexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/libs/Conexion.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,25 +165,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/AgregarPropietario.php">
+        <entry file="file://$PROJECT_DIR$/PHP/reportes/ModEquipos/ModEquiposPlantilla.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-141">
-              <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PHP/AgregarEquipos.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+            <state relative-caret-position="114">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/propietario">
+        <entry file="file://$PROJECT_DIR$/PHP/reportes/ModEquipos/reporteModEquipos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/EQUIPOS_MODIFICADO">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -76,7 +194,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1463">
+            <state>
               <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
             </state>
           </provider>
@@ -117,19 +235,23 @@
         <option value="$PROJECT_DIR$/PHP/Menu.php" />
         <option value="$PROJECT_DIR$/PHP/addItems.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/console.sql" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/PHP/Modificar.php" />
         <option value="$PROJECT_DIR$/PHP/AgregarPropietario.php" />
         <option value="$PROJECT_DIR$/PHP/AgregarEquipos.php" />
+        <option value="$PROJECT_DIR$/PHP/reportes/ModEquiposPlantilla.php" />
+        <option value="$PROJECT_DIR$/PHP/reportes/reporteModEquipos.php" />
+        <option value="$PROJECT_DIR$/PHP/reportes/ModEquipos/ModEquiposPlantilla.php" />
+        <option value="$PROJECT_DIR$/PHP/reportes/ModEquipos/reporteModEquipos.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="397" />
-    <option name="y" value="50" />
-    <option name="width" value="1072" />
-    <option name="height" value="656" />
+    <option name="x" value="1082" />
+    <option name="y" value="10" />
+    <option name="width" value="1064" />
+    <option name="height" value="655" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -139,6 +261,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,44 +272,39 @@
             <path>
               <item name="inventario_ucta" type="b2602c69:ProjectViewProjectNode" />
               <item name="inventario_ucta" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventario_ucta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventario_ucta" type="462c0819:PsiDirectoryNode" />
               <item name="PHP" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="inventario_ucta" type="b2602c69:ProjectViewProjectNode" />
               <item name="inventario_ucta" type="462c0819:PsiDirectoryNode" />
               <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
+              <item name="reportes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/PHP/libs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/PHP/reportes/ModEquipos" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\inventario_ucta\PHP\Usuarios" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PHP/reportes/ModEquipos" />
       <recent name="C:\xampp\htdocs\inventario_ucta\PHP\libs" />
       <recent name="C:\xampp\htdocs\inventario_ucta\PHP\Usuarios" />
       <recent name="C:\Users\luis\PhpstormProjects\untitled1" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\inventario_ucta\PHP\Usuarios" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -231,7 +349,9 @@
       <workItem from="1551021562191" duration="4398000" />
       <workItem from="1551032895218" duration="1072000" />
       <workItem from="1551064346953" duration="590000" />
-      <workItem from="1551102425135" duration="2164000" />
+      <workItem from="1551102425135" duration="2245000" />
+      <workItem from="1551115061044" duration="1900000" />
+      <workItem from="1551120157022" duration="1003000" />
     </task>
     <task id="LOCAL-00001" summary="Agregados archivos para crud y modificaciones al menú principal">
       <created>1550088081125</created>
@@ -289,11 +409,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550953221368</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Correcciones para insertar datos agregadas.">
+      <created>1551105074901</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1551105074901</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111709000" />
+    <option name="totallyTimeSpent" value="114693000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -305,10 +432,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="28" width="1368" height="713" extended-state="6" />
-    <editor active="true" />
+    <frame x="1365" y="0" width="1082" height="1921" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1925982" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.28088802" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -323,12 +449,12 @@
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32876712" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32899022" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="11" weight="0.32899022" />
-      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.32999444" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.27265862" />
+      <window_info anchor="right" id="Database" order="3" weight="0.2837838" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15332326" />
@@ -368,7 +494,8 @@
     <MESSAGE value="htaccess, buscar completo y correcciones" />
     <MESSAGE value="Modificaciones en la ventana de agregar equipo y agregar propietario" />
     <MESSAGE value="Bugs de actualización y añadido de datos arreglados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bugs de actualización y añadido de datos arreglados" />
+    <MESSAGE value="Correcciones para insertar datos agregadas." />
+    <option name="LAST_COMMIT_MESSAGE" value="Correcciones para insertar datos agregadas." />
   </component>
   <component name="editorHistoryManager">
     <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/usuarios" />
@@ -517,8 +644,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1463">
+        <state>
           <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/AgregarPropietario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/AgregarEquipos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1027">
+          <caret line="138" selection-start-line="138" selection-end-line="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/reportes/ModEquipos/ModEquiposPlantilla.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -529,17 +677,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/AgregarPropietario.php">
+    <entry file="file://$PROJECT_DIR$/PHP/reportes/ModEquipos/reporteModEquipos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-141">
-          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        <state relative-caret-position="513">
+          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/AgregarEquipos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+    <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/EQUIPOS_MODIFICADO">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
