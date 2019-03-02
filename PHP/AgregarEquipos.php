@@ -68,7 +68,7 @@ if ($seguridad->getUsuario() == null) {
 
         <div class="form-group">
             <label class="form-control" style="background-color: #e6f7ff ">Número de serie: </label>
-            <input type="text" name="no_serie" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+            <input type="text" name="no_serie" class="form-control"  required>
         </div>
 
         <div class="form-group">
@@ -136,6 +136,7 @@ if (isset($_POST["addI"])){
     $ubicacionEquipo = $_POST["ubicacion"];
     $categoriaEquipo = $_POST["BuscaCategoria"];
     $propieterioEquipo = $_POST["BuscaPropietario"];
+    $usuario = $seguridad->getUsuario();
 
 
 //validación de existencia de datos para no repetirlos
@@ -151,17 +152,23 @@ if (isset($_POST["addI"])){
             $cat = "SELECT ID_Categoria FROM categoria where Nombre_Categoria = '$categoriaEquipo'";
             $prop = "SELECT ID_Propietario FROM propietario where Nombre_Propietario = '$propieterioEquipo'";
 
+            $usu = mysqli_query($conn,"SELECT ID_Usuario FROM usuarios WHERE nombre_Usuario = '$usuario'");
+
             $res1 = $conn->query($cat);
             $res2 = $conn->query($prop);
 
             $catDat = $res1->fetch_assoc();
             $propDat = $res2->fetch_assoc();
+            $nus = $usu->fetch_assoc();
 
             $n1 = $catDat["ID_Categoria"];
             $n2 = $propDat["ID_Propietario"];
+            $n3 = $nus["ID_Usuario"];
+
 
 //inserción de datos a la tabla de los equipos con id's foraneos correspondientes.
-            $sqlNuevoEquipo = "INSERT INTO equipos(ID_Equipo, Modelo, N_serie, Ubicacion, Marca, Nombre_Equipo, ID_Categoria, ID_Propietario)  VALUES ('$iDequipo','$modeloEquipo','$serieEquipo','$ubicacionEquipo','$marcaEquipo','$nombreEquipo','$n1','$n2') ";
+            $sqlNuevoEquipo = "INSERT INTO equipos(ID_Equipo, Modelo, N_serie, Ubicacion, Marca, Descripcion, ID_Categoria, ID_Propietario, ID_Usuario)  
+VALUES ('$iDequipo','$modeloEquipo','$serieEquipo','$ubicacionEquipo','$marcaEquipo','$nombreEquipo','$n1','$n2','$n3') ";
 
             if ($conn->query($sqlNuevoEquipo) === TRUE) {
                 echo "<script>alert('Nuevo equipo agregado!');</script>";
@@ -173,6 +180,9 @@ if (isset($_POST["addI"])){
 
 }
 consultarTodo($conn);
+
+// valida solo numeros en los campos:
+//onkeypress='return event.charCode >= 48 && event.charCode <= 57'
 ?>
 </body>
 </html>

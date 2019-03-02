@@ -24,7 +24,8 @@
 function consultarTodo($conn)
 {
 
-    $stmn = "SELECT ID_Equipo, Modelo, N_serie, Ubicacion, Marca, Nombre_Equipo, Nombre_Categoria, Nombre_Propietario FROM equipos inner join categoria c on equipos.ID_Categoria = c.ID_Categoria inner join propietario p on equipos.ID_Propietario = p.ID_Propietario ORDER BY ID_Equipo DESC";
+    $stmn = "SELECT ID_Equipo, Modelo, N_serie, Ubicacion, Marca, Descripcion, Nombre_Categoria, Nombre_Propietario FROM equipos inner join
+  categoria c on equipos.ID_Categoria = c.ID_Categoria inner join propietario p on equipos.ID_Propietario = p.ID_Propietario ORDER BY ID_Equipo DESC";
 
 
     $result = $conn->query($stmn);
@@ -38,7 +39,7 @@ function consultarTodo($conn)
         while ($fila = $result->fetch_assoc()) {
 
             echo "<tr><td>" . $fila["ID_Equipo"] . "</td>";
-            echo "<td>" . $fila["Nombre_Equipo"] . "</td>";
+            echo "<td>" . $fila["Descripcion"] . "</td>";
             echo "<td>" . $fila["Modelo"] . "</td>";
             echo "<td>" . $fila["Marca"] . "</td>";
             echo "<td>" . $fila["Ubicacion"] . "</td>";
@@ -49,6 +50,8 @@ function consultarTodo($conn)
 
 
         }
+    }else{
+        echo "No se encontraron equipos en el inventario";
     }
 
     echo "</table>";
@@ -57,7 +60,8 @@ function consultarTodo($conn)
 function ConsultarSinAcciones($conn)
 {
 
-    $stmn = "SELECT ID_Equipo, Modelo, N_serie, Ubicacion, Marca, Nombre_Equipo, Nombre_Categoria, Nombre_Propietario FROM equipos inner join categoria c on equipos.ID_Categoria = c.ID_Categoria inner join propietario p on equipos.ID_Propietario = p.ID_Propietario ORDER BY ID_Equipo DESC";
+    $stmn = "SELECT ID_Equipo, Modelo, N_serie, Ubicacion, Marca, Descripcion, Nombre_Categoria, Nombre_Propietario FROM equipos inner join
+  categoria c on equipos.ID_Categoria = c.ID_Categoria inner join propietario p on equipos.ID_Propietario = p.ID_Propietario ORDER BY ID_Equipo DESC";
 
 
     $result = $conn->query($stmn);
@@ -71,7 +75,7 @@ function ConsultarSinAcciones($conn)
         while ($fila = $result->fetch_assoc()) {
 
             echo "<tr><td>" . $fila["ID_Equipo"] . "</td>";
-            echo "<td>" . $fila["Nombre_Equipo"] . "</td>";
+            echo "<td>" . $fila["Descripcion"] . "</td>";
             echo "<td>" . $fila["Modelo"] . "</td>";
             echo "<td>" . $fila["Marca"] . "</td>";
             echo "<td>" . $fila["Ubicacion"] . "</td>";
@@ -89,7 +93,9 @@ function ConsultarSinAcciones($conn)
 function buscaID($conn, $condicion)
 {
 
-    $stmn = "SELECT ID_Equipo, Modelo, N_serie, Ubicacion, Marca, Nombre_Equipo, Nombre_Categoria, Nombre_Propietario FROM equipos inner join categoria c on equipos.ID_Categoria = c.ID_Categoria inner join propietario p on equipos.ID_Propietario = p.ID_Propietario WHERE ID_Equipo=$condicion";
+    $stmn = "SELECT ID_Equipo, Modelo, N_serie, Ubicacion, Marca, Descripcion, Nombre_Categoria, Nombre_Propietario FROM equipos inner
+  join
+  categoria c on equipos.ID_Categoria = c.ID_Categoria inner join propietario p on equipos.ID_Propietario = p.ID_Propietario WHERE ID_Equipo=$condicion";
 
 
     $result = $conn->query($stmn);
@@ -103,7 +109,7 @@ function buscaID($conn, $condicion)
         while ($fila = $result->fetch_assoc()) {
 
             echo "<tr><td>" . $fila["ID_Equipo"] . "</td>";
-            echo "<td>" . $fila["Nombre_Equipo"] . "</td>";
+            echo "<td>" . $fila["Descripcion"] . "</td>";
             echo "<td>" . $fila["Modelo"] . "</td>";
             echo "<td>" . $fila["Marca"] . "</td>";
             echo "<td>" . $fila["Ubicacion"] . "</td>";
@@ -120,7 +126,8 @@ function buscaID($conn, $condicion)
 
 function buscarCategoria($conn, $condicion)
 {
-    $stmn = "SELECT ID_Equipo, Modelo, N_serie, Ubicacion, Marca, Nombre_Equipo, Nombre_Categoria, Nombre_Propietario FROM equipos inner join categoria c on equipos.ID_Categoria = c.ID_Categoria inner join propietario p on equipos.ID_Propietario = p.ID_Propietario WHERE Nombre_Categoria='$condicion'";
+    $stmn = "SELECT ID_Equipo, Modelo, N_serie, Ubicacion, Marca, Descripcion, Nombre_Categoria, Nombre_Propietario FROM equipos inner join
+  categoria c on equipos.ID_Categoria = c.ID_Categoria inner join propietario p on equipos.ID_Propietario = p.ID_Propietario WHERE Nombre_Categoria='$condicion'";
 
 
     $result = $conn->query($stmn);
@@ -134,7 +141,7 @@ function buscarCategoria($conn, $condicion)
         while ($fila = $result->fetch_assoc()) {
 
             echo "<tr><td>" . $fila["ID_Equipo"] . "</td>";
-            echo "<td>" . $fila["Nombre_Equipo"] . "</td>";
+            echo "<td>" . $fila["Descripcion"] . "</td>";
             echo "<td>" . $fila["Modelo"] . "</td>";
             echo "<td>" . $fila["Marca"] . "</td>";
             echo "<td>" . $fila["Ubicacion"] . "</td>";
@@ -151,7 +158,8 @@ function buscarCategoria($conn, $condicion)
 
 function buscarPropietario($conn, $condicion)
 {
-    $stmn = "SELECT ID_Equipo, Modelo, N_serie, Ubicacion, Marca, Nombre_Equipo, Nombre_Categoria, Nombre_Propietario, Telefono,Aula FROM equipos inner join categoria c on equipos.ID_Categoria = c.ID_Categoria inner join propietario p on equipos.ID_Propietario = p.ID_Propietario WHERE Nombre_Propietario='$condicion'";
+    $stmn = "SELECT ID_Equipo, Modelo, N_serie, Ubicacion, Marca, Descripcion, Nombre_Categoria, Nombre_Propietario, Telefono,Aula FROM 
+                                                                                                                  equipos inner join categoria c on equipos.ID_Categoria = c.ID_Categoria inner join propietario p on equipos.ID_Propietario = p.ID_Propietario WHERE Nombre_Propietario='$condicion'";
 
 
     $result = $conn->query($stmn);
@@ -165,7 +173,7 @@ function buscarPropietario($conn, $condicion)
         while ($fila = $result->fetch_assoc()) {
 
             echo "<tr><td>" . $fila["ID_Equipo"] . "</td>";
-            echo "<td>" . $fila["Nombre_Equipo"] . "</td>";
+            echo "<td>" . $fila["Descripcion"] . "</td>";
             echo "<td>" . $fila["Modelo"] . "</td>";
             echo "<td>" . $fila["Marca"] . "</td>";
             echo "<td>" . $fila["Ubicacion"] . "</td>";

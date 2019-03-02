@@ -40,7 +40,7 @@ $filas = $res->fetch_assoc();
 
     <label class="form-control" style="background-color: #e6f7ff ">Nombre (Descripción del equipo):</label>
     <input required type="text" class="form-control" name="nombre_equipo"
-           value="<?php echo $filas["Nombre_Equipo"]; ?>"><br>
+           value="<?php echo $filas["Descripcion"]; ?>"><br>
 
     <label class="form-control" style="background-color: #e6f7ff ">Modelo:</label>
     <input required type="text" name="modelo" class="form-control" value="<?php echo $filas["Modelo"]; ?>"><br>
@@ -50,7 +50,6 @@ $filas = $res->fetch_assoc();
 
     <label class="form-control" style="background-color: #e6f7ff ">No. serie:</label>
     <input required class="form-control" type="text" name="no_serie"
-           onkeypress='return event.charCode >= 48 && event.charCode <= 57'
            value="<?php echo $filas["N_serie"]; ?>"><br>
 
     <label class="form-control" style="background-color: #e6f7ff ">Ubicacion:</label>
@@ -127,7 +126,7 @@ if (isset($_POST["Actualizar"])) {
 
 
 //actualización de datos
-    $sqlActualizar = "UPDATE equipos SET ID_Equipo='$idNuev', Nombre_Equipo='$nombNuev',
+    $sqlActualizar = "UPDATE equipos SET ID_Equipo='$idNuev', Descripcion='$nombNuev',
                    Modelo='$modNuev', Marca='$marcNuev', N_serie='$serNuev',
                    Ubicacion='$ubNuev', ID_Categoria='$c[ID_Categoria]',ID_Propietario='$p[ID_Propietario]' WHERE ID_Equipo = '$id'";
 

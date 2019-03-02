@@ -74,11 +74,11 @@
                             exit();
                         }
 
-                        $sql = "SELECT * from usuarios  where nombreUsuario = '$usuario' and pass = '$pass' ";
-                        $sql2 = "SELECT * FROM admins where User_Admin = '$usuario' and Pass_Admin = '$pass'";
-                        $result2 = $conn->query($sql2);
+                        $sql = "SELECT * from usuarios  where nombre_Usuario = '$usuario' and pass = '$pass' ";
+
+
                         $result = $conn->query($sql);
-                        if ($result->num_rows > 0||$result2->num_rows>0)
+                        if ($result->num_rows > 0)
                         {
                             //VARIABLE DE SESIÓN DEL USUARIO
 
