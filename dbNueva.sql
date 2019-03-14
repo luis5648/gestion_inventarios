@@ -53,8 +53,8 @@ create database inventario_ucta_t;
 			ANTERIOR_N_SERIE VARCHAR(45),
 			ANTERIOR_UBICACION VARCHAR(45),
 			ANTERIOR_MARCA VARCHAR(45),
-			ANTERIOR_ID_CATEGORIA INT NOT NULL,
-			ANTERIOR_ID_PROPIETARIO INT NOT NULL,
+			ANTERIOR_ID_CATEGORIA  VARCHAR(45),
+			ANTERIOR_ID_PROPIETARIO VARCHAR(45),
 
 			NUEVO_ID_EQUIPO INT NOT NULL,
 			NUEVO_DESCRIPCION VARCHAR(45),
@@ -62,9 +62,9 @@ create database inventario_ucta_t;
 			NUEVO_N_SERIE VARCHAR(45),
 			NUEVO_UBICACION VARCHAR(45),
 			NUEVO_MARCA VARCHAR(45),
-			NUEVO_ID_CATEGORIA INT NOT NULL,
-			NUEVO_ID_PROPIETARIO INT NOT NULL,
-			USUARIO_QUE_MODIFICA INT NOT NULL,
+			NUEVO_ID_CATEGORIA VARCHAR(45),
+			NUEVO_ID_PROPIETARIO VARCHAR(45),
+			USUARIO_QUE_MODIFICA VARCHAR(45),
 			FECHA DATETIME
 		);
 
@@ -77,9 +77,9 @@ create database inventario_ucta_t;
 		N_SERIE VARCHAR(45),
 		UBICACION VARCHAR(45),
 		MARCA VARCHAR(45),
-		ID_CATEGORIA INT NOT NULL,
-		ID_PROPIETARIO INT NOT NULL,
-		USUARIO_QUE_INSERTA INT NOT NULL,
+		ID_CATEGORIA VARCHAR(45),
+		ID_PROPIETARIO VARCHAR(45),
+		USUARIO_QUE_INSERTA VARCHAR(45),
 		FECHA DATETIME
 
 
@@ -130,7 +130,10 @@ CREATE TRIGGER equiposAI AFTER INSERT ON equipos FOR EACH ROW
 	INSERT INTO insrtEquiposRes(ID_EQUIPO, DESCRIPCION, MODELO, N_SERIE, UBICACION,
 															MARCA, ID_CATEGORIA, ID_PROPIETARIO, USUARIO_QUE_INSERTA, FECHA)
 	VALUES (NEW.ID_Equipo,NEW.Descripcion,NEW.Modelo, NEW.N_serie, NEW.Ubicacion,NEW.Marca,
-					NEW.ID_Categoria,NEW.ID_Propietario,NEW.ID_Usuario,NOW());
+					(SELECT Nombre_Categoria from categoria where ID_Categoria = NEW.ID_Categoria),(SELECT Nombre_Propietario
+					from propietario where ID_Propietario =  NEW
+					  .ID_Propietario),NEW
+					  .ID_Usuario,NOW());
 
 
 CREATE TRIGGER equiposBU BEFORE UPDATE ON equipos FOR EACH ROW
@@ -138,7 +141,12 @@ CREATE TRIGGER equiposBU BEFORE UPDATE ON equipos FOR EACH ROW
 														ANTERIOR_ID_CATEGORIA, ANTERIOR_ID_PROPIETARIO,
 														NUEVO_ID_EQUIPO, NUEVO_DESCRIPCION, NUEVO_MODELO, NUEVO_N_SERIE, NUEVO_UBICACION,
 															NUEVO_MARCA, NUEVO_ID_CATEGORIA, NUEVO_ID_PROPIETARIO, USUARIO_QUE_MODIFICA, FECHA)
-	VALUES (OLD.ID_Equipo,OLD.Descripcion,OLD.Modelo, OLD.N_serie, OLD.Ubicacion,OLD.Marca,OLD.ID_Categoria,
-					OLD.ID_Propietario,NEW.ID_Equipo,NEW.Descripcion,NEW.Modelo, NEW.N_serie, NEW.Ubicacion,NEW.Marca,NEW.ID_Categoria,NEW.ID_Propietario,
+	VALUES (OLD.ID_Equipo,OLD.Descripcion,OLD.Modelo, OLD.N_serie, OLD.Ubicacion,OLD.Marca,(SELECT Nombre_Categoria
+	from categoria where ID_Categoria = OLD.ID_Categoria),
+					(SELECT Nombre_Propietario from propietario where ID_Propietario = OLD.ID_Propietario),NEW.ID_Equipo,NEW
+					  .Descripcion,NEW.Modelo, NEW.N_serie, NEW.Ubicacion,NEW.Marca,(SELECT Nombre_Categoria from categoria
+					  where ID_Categoria = NEW.ID_Categoria),(SELECT Nombre_Propietario from propietario where ID_Propietario =
+					                                                                                           NEW
+					                                                                                             .ID_Propietario),
 					NEW.ID_Usuario,NOW());
 
