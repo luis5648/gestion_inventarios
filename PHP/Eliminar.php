@@ -12,8 +12,10 @@ if ($seguridad->getUsuario() == null) {
 $id = $_GET["id"];
 $idUsuario = $_GET["id_user"];
 
-$consultaElim = mysqli_query($conn, "INSERT INTO delEquiposRes(ID_EQUIPO,DESCRIPCION,USUARIO_QUE_ELIMINA,FECHA)
-VALUES ((SELECT ID_Equipo FROM equipos WHERE ID_Equipo='$id')),(SELECT Descripcion FROM equipos WHERE ID_Equipo='$id'),'$idUsuario', NOW()");
+//$consultaElim = mysqli_query($conn, "INSERT INTO delEquiposRes(ID_EQUIPO,DESCRIPCION,USUARIO_QUE_ELIMINA,FECHA)
+//VALUES ((SELECT ID_Equipo FROM equipos WHERE ID_Equipo='$id')),(SELECT Descripcion FROM equipos WHERE ID_Equipo='$id'),'$idUsuario', NOW()");
+
+$setUsuario = mysqli_query($conn,"UPDATE equipos SET ID_Usuario = (SELECT ID_Usuario FROM usuarios WHERE nombre_Usuario = '$idUsuario)");
 
 $consulta = mysqli_query($conn,"DELETE FROM equipos WHERE ID_Equipo = '$id'");
 
