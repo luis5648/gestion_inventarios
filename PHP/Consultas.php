@@ -23,6 +23,8 @@
 
 function consultarTodo($conn)
 {
+    
+    $usuario = $_SESSION["usuario"];
 
     $stmn = "SELECT ID_Equipo, Modelo, N_serie, Ubicacion, Marca, Descripcion, Nombre_Categoria, Nombre_Propietario FROM equipos inner join
   categoria c on equipos.ID_Categoria = c.ID_Categoria inner join propietario p on equipos.ID_Propietario = p.ID_Propietario ORDER BY ID_Equipo DESC";
@@ -46,7 +48,7 @@ function consultarTodo($conn)
             echo "<td>" . $fila["Nombre_Propietario"] . "</td>";
             echo "<td>" . $fila["Nombre_Categoria"] . "</td>";
             echo "<td>" . $fila["N_serie"] . "</td>";
-            echo "<td><a href=\"Modificar.php?id=$fila[ID_Equipo]\">Modificar</a> | <a href=\"Eliminar.php?id=$fila[ID_Equipo]\" onClick=\"return confirm('¿Está seguro que desea eliminar el registro?')\">Eliminar</a></td></tr>";
+            echo "<td><a href=\"Modificar.php?id=$fila[ID_Equipo]\">Modificar</a> | <a href=\"Eliminar.php?id=".$fila['ID_Equipo']."&id_user=".$usuario."\" onClick=\"return confirm('¿Está seguro que desea eliminar el registro?')\">Eliminar</a></td></tr>";
 
 
         }
