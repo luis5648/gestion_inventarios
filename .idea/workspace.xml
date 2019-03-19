@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7d72722-ef17-4e01-81d1-2af92d694e97" name="Default Changelist" comment="" />
+    <list default="true" id="e7d72722-ef17-4e01-81d1-2af92d694e97" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reportes_python/reporte.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Reportes_python/reporte.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reportes_python/reporteEquiposMod.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reportes_python/reporteEquiposMod.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +71,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta_t/table/modEquiposRes">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -85,20 +89,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/libs/Conexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="304">
+              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+        <entry file="file://$PROJECT_DIR$/Reportes_python/reporteEquiposMod.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1368">
-              <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+            <state relative-caret-position="342">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -166,8 +170,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/console.sql" />
         <option value="$PROJECT_DIR$/PHP/AgregarEquipos.php" />
         <option value="$PROJECT_DIR$/dbNueva.sql" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/cosas por hacer" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
       </list>
     </option>
   </component>
@@ -185,6 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,11 +197,15 @@
               <item name="inventario_ucta" type="b2602c69:ProjectViewProjectNode" />
               <item name="inventario_ucta" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="inventario_ucta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventario_ucta" type="462c0819:PsiDirectoryNode" />
+              <item name="Reportes_python" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -207,17 +216,18 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Reportes_python" />
+      <recent name="C:\xampp\htdocs\inventario_ucta\PHP\Usuarios" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/PHP/reportes/ModEquipos" />
       <recent name="C:\xampp\htdocs\inventario_ucta\PHP\libs" />
       <recent name="C:\xampp\htdocs\inventario_ucta\PHP\Usuarios" />
       <recent name="C:\Users\luis\PhpstormProjects\untitled1" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\inventario_ucta\PHP\Usuarios" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -271,7 +281,8 @@
       <workItem from="1551808890027" duration="932000" />
       <workItem from="1551982096968" duration="5495000" />
       <workItem from="1552584790361" duration="36000" />
-      <workItem from="1552585004112" duration="232000" />
+      <workItem from="1552585004112" duration="1167000" />
+      <workItem from="1552586242873" duration="1509000" />
     </task>
     <task id="LOCAL-00001" summary="Agregados archivos para crud y modificaciones al menú principal">
       <created>1550088081125</created>
@@ -357,11 +368,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552585154481</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Reportes con python añadidos">
+      <created>1552585428248</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1552585428248</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131788000" />
+    <option name="totallyTimeSpent" value="134217000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -375,7 +393,7 @@
   <component name="ToolWindowManager">
     <frame x="1365" y="0" width="1922" height="1081" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18176973" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18336888" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -387,11 +405,11 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Console" order="7" sideWeight="0.49924356" weight="0.6434635" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32706374" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32706374" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32899022" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="11" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.32767403" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.32767403" />
+      <window_info anchor="bottom" id="Terminal" order="13" visible="true" weight="0.32706374" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -439,7 +457,8 @@
     <MESSAGE value="reportes en pdf" />
     <MESSAGE value="usuario agregado a la tabla de equipos" />
     <MESSAGE value="Reporte de pruebas a partir de un html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reporte de pruebas a partir de un html" />
+    <MESSAGE value="Reportes con python añadidos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reportes con python añadidos" />
   </component>
   <component name="editorHistoryManager">
     <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta/table/usuarios" />
@@ -634,6 +653,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/reportes/TCPDF_test/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/dbNueva.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2850">
@@ -648,10 +670,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta_t/table/modEquiposRes">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/cosas por hacer">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -659,13 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
           <caret line="35" column="62" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -683,20 +698,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cosas por hacer">
+    <entry file="file://$PROJECT_DIR$/PHP/libs/Conexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        <state relative-caret-position="304">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/reportes/TCPDF_test/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/libs/Conexion.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="273">
+          <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reportes_python/reporteEquiposMod.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3e3a21d2-cb33-442c-99d1-ac9e9bbf6fb9/schema/inventario_ucta_t/table/modEquiposRes">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

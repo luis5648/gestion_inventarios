@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# -*- coding: utf8 -*-
+# -*- coding: utf-8 -*-
 
 from fpdf import FPDF
 import mysql.connector
@@ -12,6 +12,7 @@ mydb = mysql.connector.connect(
   passwd="",
   database="inventario_ucta_t"
 )
+
 
 query = mydb.cursor()
 
@@ -54,22 +55,22 @@ for data in res:
 
     pdf.cell(50, 6, "ID reporte: "+str(data[0])+", ", 1, 0, 'L',1)
     pdf.cell(50, 6, "ID de equipo anterior: "+str(data[1])+", ", 0, 0, 'L',1)
-    pdf.cell(50, 6, u"Descripcion anterior: "+str(data[2])+", ", 0, 1, 'L',1)
-    pdf.cell(50, 6, u"Modelo anterior: "+str(data[3]), 0, 0, 'L',1)
+    pdf.cell(50, 6, u"Descripcion anterior: "+(data[2]).encode('ascii', 'ignore')+", ", 0, 1, 'L',1)
+    pdf.cell(50, 6, u"Modelo anterior: "+(data[3]).encode('ascii', 'ignore'), 0, 0, 'L',1)
     pdf.cell(50, 6, u"Numero de serie anterior: "+str(data[4]), 0, 0, 'L',1)
-    pdf.cell(50, 6, u"Ubicacion anterior: "+str(data[5]), 0, 1, 'L',1)
-    pdf.cell(50, 6, u"Marca anterior: "+str(data[6]), 0, 0, 'L',1)
-    pdf.cell(50, 6, u"Categoria anterior: "+str(data[7]), 0, 0, 'L',1)
-    pdf.cell(50, 6, 'Propietario anterior: '+str(data[8]), 0, 1, 'L',1)
+    pdf.cell(50, 6, u"Ubicacion anterior: "+(data[5]).encode('ascii', 'ignore'), 0, 1, 'L',1)
+    pdf.cell(50, 6, u"Marca anterior: "+(data[6]).encode('ascii', 'ignore'), 0, 0, 'L',1)
+    pdf.cell(50, 6, u"Categoria anterior: "+(data[7]).encode('ascii', 'ignore'), 0, 0, 'L',1)
+    pdf.cell(50, 6, 'Propietario anterior: '+(data[8]).encode('ascii', 'ignore'), 0, 1, 'L',1)
     pdf.cell(50, 6, u"ID de equipo actual: "+str(data[9]), 0, 0, 'L',1)
-    pdf.cell(50, 6, u"Descripcion actual: "+str(data[10]), 0, 0, 'L',1)
+    pdf.cell(50, 6, u"Descripcion actual: "+(data[10]).encode('ascii', 'ignore'), 0, 0, 'L',1)
     pdf.cell(50, 6, u"Modelo actual: "+str(data[11]), 0, 1, 'L',1)
     pdf.cell(50, 6, u"Numero de serie actual: "+str(data[12]), 0, 0, 'L',1)
-    pdf.cell(50, 6, u"Ubicacion actual: "+str(data[13]), 0, 0, 'L',1)
-    pdf.cell(50, 6, u"Marca actual: "+str(data[14]), 0, 1, 'L',1)
-    pdf.cell(50, 6, u"Categoria actual: "+str(data[15]), 0, 0, 'L',1)
-    pdf.cell(50, 6, u"Propietario actual: "+str(data[16]), 0, 0, 'L',1)
-    pdf.cell(50, 6, u"Usuario que modifica: "+str(data[17]), 0, 1, 'L',1)
+    pdf.cell(50, 6, u"Ubicacion actual: "+(data[13]).encode('ascii', 'ignore'), 0, 0, 'L',1)
+    pdf.cell(50, 6, u"Marca actual: "+(data[14]).encode('ascii', 'ignore'), 0, 1, 'L',1)
+    pdf.cell(50, 6, u"Categoria actual: "+(data[15]).encode('ascii', 'ignore'), 0, 0, 'L',1)
+    pdf.cell(50, 6, u"Propietario actual: "+(data[16]).encode('ascii', 'ignore'), 0, 0, 'L',1)
+    pdf.cell(50, 6, u"Usuario que modifica: "+(data[17]).encode('ascii', 'ignore'), 0, 1, 'L',1)
     pdf.cell(50, 6, u"Fecha de modificacion: "+str(data[18]), 0, 0, 'L',1)
 
 #footer
