@@ -132,8 +132,8 @@ CREATE TRIGGER equiposAI AFTER INSERT ON equipos FOR EACH ROW
 	VALUES (NEW.ID_Equipo,NEW.Descripcion,NEW.Modelo, NEW.N_serie, NEW.Ubicacion,NEW.Marca,
 					(SELECT Nombre_Categoria from categoria where ID_Categoria = NEW.ID_Categoria),(SELECT Nombre_Propietario
 					from propietario where ID_Propietario =  NEW
-					  .ID_Propietario),NEW
-					  .ID_Usuario,NOW());
+					  .ID_Propietario),(SELECT nombre_Usuario FROM usuarios WHERE ID_Usuario = NEW
+					  .ID_Usuario),NOW());
 
 
 CREATE TRIGGER equiposBU BEFORE UPDATE ON equipos FOR EACH ROW
@@ -144,9 +144,10 @@ CREATE TRIGGER equiposBU BEFORE UPDATE ON equipos FOR EACH ROW
 	VALUES (OLD.ID_Equipo,OLD.Descripcion,OLD.Modelo, OLD.N_serie, OLD.Ubicacion,OLD.Marca,(SELECT Nombre_Categoria
 	from categoria where ID_Categoria = OLD.ID_Categoria),
 					(SELECT Nombre_Propietario from propietario where ID_Propietario = OLD.ID_Propietario),NEW.ID_Equipo,NEW
-					  .Descripcion,NEW.Modelo, NEW.N_serie, NEW.Ubicacion,NEW.Marca,(SELECT Nombre_Categoria from categoria
-					  where ID_Categoria = NEW.ID_Categoria),(SELECT Nombre_Propietario from propietario where ID_Propietario =
+					  .Descripcion,NEW.Modelo, NEW.N_serie, NEW.Ubicacion,NEW.Marca,(SELECT Nombre_Categoria FROM categoria
+					  where ID_Categoria = NEW.ID_Categoria),(SELECT Nombre_Propietario FROM propietario WHERE ID_Propietario =
 					                                                                                           NEW
 					                                                                                             .ID_Propietario),
-					NEW.ID_Usuario,NOW());
+					(SELECT nombre_Usuario FROM usuarios WHERE ID_Usuario = NEW
+					  .ID_Usuario),NOW());
 

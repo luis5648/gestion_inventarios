@@ -1,6 +1,6 @@
-1.- quitar la relación de la tabla de usuarios con la tabla de equipos y asignar el nombre del usuario en bruto.
-2.- Investigar como añadir caracteres especiales con python desde variables
+1.- quitar la relación de la tabla de usuarios con la tabla de equipos y asignar el nombre del usuario en bruto.(solucionado)
+
+2.- Investigar como añadir caracteres especiales con python desde variables (Solucionado)
 3.- asignar en el php de eliminar equipos una acción que inserte o que añada de alguna manera al usuario en sesión que
 eliminó
 4.- verificar que se haya hecho lo mismo con las acciones de insertar.
-5.-
