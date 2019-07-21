@@ -32,6 +32,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-b-160 p-t-50">
+                <img src="images/LogoCTA.png" style="width: 70%;height: 70%; margin-left: 20%;">
 				<form class="login100-form validate-form" action="" method="post">
 					<span class="login100-form-title p-b-43">
 						Inicio de sesión - UCTA inventario
@@ -52,7 +53,7 @@
 						<button class="login100-form-btn" name="inicioSesion">
 							Iniciar sesión
 						</button>
-                        <p ><a style="color: black;" href="PHP/Usuarios/loginAdmin.php">Agregar nuevos usuarios (Solo administrador)</a></p>
+
 					</div>
 					
 

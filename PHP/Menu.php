@@ -1,11 +1,17 @@
 <?php
     require "libs/Seguridad.php";
+    require "libs/Conexion.php";
     $seguridad = new Seguridad();
+    $VAL = "ADMINISTRADOR";
+    $usuarioEnSesion = $seguridad->getUsuario();
+
+    $esAdministrador = mysqli_query($conn,"SELECT * FROM usuarios WHERE Administrador = '$VAL' and nombre_Usuario = '$usuarioEnSesion'" );
 
     if ($seguridad->getUsuario()==null){
         header('Location: ../index.php');
         exit;
     }
+
 ?>
 
 <!doctype html>
@@ -69,14 +75,19 @@ $hora = time();
 echo "Usuario en sesión: \n".$user;
 ?>
 <div style="background-color: white">
+    <?php
+    if ($esAdministrador->num_rows>0){
+        echo '<div class="dropdown" >';
+        echo '   <button class="dropbt">Agregar</button>';
+        echo '     <div class="dropcont">';
+        echo '       <a href="AgregarEquipos.php">Agregar equipo</a>';
+        echo '    </div>';
+        echo '</div>';
+    }else{
+        //echo $hora;
+    }
 
-    <div class="dropdown" >
-        <button class="dropbt">Agregar</button>
-        <div class="dropcont">
-            <a href="AgregarEquipos.php">Agregar equipo</a>
-        </div>
-    </div>
-
+    ?>
     <div class="dropdown" >
         <button class="dropbt">Buscar</button>
         <div class="dropcont">
@@ -87,10 +98,14 @@ echo "Usuario en sesión: \n".$user;
 </div>
 <?php
 
-require "libs/Conexion.php";
 require "Consultas.php";
 
-consultarTodo($conn);
+if (!$esAdministrador-> num_rows> 0){
+    ConsultarSinAcciones($conn);
+}else{
+    consultarTodo($conn);
+}
+
 
 ?>
 

@@ -206,7 +206,9 @@ function ConsultarPropietarios($conn){
             echo "<tr><td>" . $fila["ID_Propietario"] . "</td>";
             echo "<td>" . $fila["Nombre_Propietario"] . "</td>";
             echo "<td>" . $fila["Telefono"] . "</td>";
-            echo "<td>" . $fila["Aula"] . "</td></tr>";
+            echo "<td>" . $fila["Aula"] . "</td>";
+            echo "<td><a href=\"ModificarPropietarios?id=$fila[ID_Propietario]\">Modificar</a> | <a href=\"EliminarPropietarios.php?id=".$fila['ID_Propietario']."\" onClick=\"return confirm('¿Está seguro que desea eliminar el registro?')\">Eliminar</a></td></tr>";
+
 
         }
     }

@@ -93,7 +93,7 @@ if ($seguridad->getUsuario() == null) {
 
                 ?>
             </select>
-            <p>¿No se encuentra el propietario en la lista? <a href="AgregarPropietario.php">Agregar propietario</a></p>
+            <p>¿No se encuentra el propietario en la lista? <a href="Propietarios/AgregarPropietario.php">Agregar propietario</a></p>
         </div>
         <br>
         <div class="form-group" >

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Agregar propietarios</title>
 
+    <link rel="stylesheet" href="../../css/TablaAll.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
@@ -31,14 +32,14 @@
         <button class="btn btn-success" name="agregarP">Agregar</button>
     </div>
 
-    <a href="AgregarEquipos.php" class="btn btn-secondary">Regresar</a>
+    <a href="../AgregarEquipos.php" class="btn btn-secondary">Regresar</a>
 
 
 </form>
 
 <?php
-require "libs/Conexion.php";
-require "Consultas.php";
+require "../libs/Conexion.php";
+require "../Consultas.php";
 
 if (isset($_POST["agregarP"])) {
     $nombreP = $_POST["NombrePropietario"];

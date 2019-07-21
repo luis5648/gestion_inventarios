@@ -46,8 +46,9 @@ require "libs/Conexion.php";
 
             if ($res->num_rows > 0) {
                 while ($filas = $res->fetch_assoc()) {
-                    echo "<option value=" . $filas["Nombre_Propietario"] . ">" . $filas["Nombre_Propietario"] . "</option>";
+                    echo "<option value='$filas[Nombre_Propietario]'> $filas[Nombre_Propietario]</option>";
                 }
+
 
 
             }
@@ -72,7 +73,7 @@ require "libs/Conexion.php";
 
             if ($res->num_rows > 0) {
                 while ($filas = $res->fetch_assoc()) {
-                    echo "<option value=" . $filas["Nombre_Categoria"] . ">" . $filas["Nombre_Categoria"] . "</option>";
+                    echo "<option value='$filas[Nombre_Categoria]'> $filas[Nombre_Categoria]</option>";
                 }
 
 
