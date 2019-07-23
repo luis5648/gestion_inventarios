@@ -9,7 +9,7 @@ if ($seguridad->getUsuario() == null) {
     exit;
 }
 
-$id = $_GET["id"];
+$id = base64_decode($_GET["id"]);
 
 $_SESSION['id'] = $id;
 $consulta = "SELECT * FROM equipos WHERE ID_Equipo='$id'";

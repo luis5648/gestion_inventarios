@@ -48,7 +48,7 @@ function consultarTodo($conn)
             echo "<td>" . $fila["Nombre_Propietario"] . "</td>";
             echo "<td>" . $fila["Nombre_Categoria"] . "</td>";
             echo "<td>" . $fila["N_serie"] . "</td>";
-            echo "<td><a href=\"Modificar.php?id=$fila[ID_Equipo]\">Modificar</a> | <a href=\"Eliminar.php?id=".$fila['ID_Equipo']."&id_user=".$usuario."\" onClick=\"return confirm('¿Está seguro que desea eliminar el registro?')\">Eliminar</a></td></tr>";
+            echo "<td><a href=\"Modificar.php?id=".base64_encode($fila['ID_Equipo'])."\">Modificar</a> | <a href=\"Eliminar.php?id=".base64_encode($fila['ID_Equipo'])."&id_user=".base64_encode($usuario)."\" onClick=\"return confirm('¿Está seguro que desea eliminar el registro?')\">Eliminar</a></td></tr>";
 
 
         }
