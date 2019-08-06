@@ -35,7 +35,7 @@
                 <img src="images/LogoCTA.png" style="width: 70%;height: 70%; margin-left: 20%;">
 				<form class="login100-form validate-form" action="" method="post">
 					<span class="login100-form-title p-b-43">
-						Inicio de sesión - UCTA inventario
+						Inicio de sesión - Sistema de control de equipo
 					</span>
 					
 					<div class="wrap-input100 rs1 validate-input" data-validate = "Username is required">

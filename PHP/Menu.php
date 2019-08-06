@@ -67,12 +67,13 @@
 </head>
 <body style="background-color: #d9f2d9">
 <h1>Menú principal</h1>
+
 <?php
 
 $user = $_SESSION['usuario'];
 
 $hora = time();
-echo "Usuario en sesión: \n".$user;
+echo "Bienvenid@!: \n".$user;
 ?>
 <div style="background-color: white">
     <?php
@@ -112,6 +113,8 @@ if (!$esAdministrador-> num_rows> 0){
     <form action="libs/CerrarSesion.php" method="post">
         <button>Cerrar Sesión</button>
     </form>
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../js/datos.js"></script>
 </body>
 </html>
