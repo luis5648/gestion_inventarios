@@ -23,6 +23,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Menú principal</title>
     <link rel="stylesheet" href="../css/TablaAll.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
     <style>
         button{
 
@@ -65,15 +66,15 @@
 
     </style>
 </head>
-<body style="background-color: #d9f2d9">
-<h1>Menú principal</h1>
+<body style="background-color: #d9f2d9; padding:3%">
+<h1 style="text-align: center">Menú principal</h1>
 
 <?php
 
 $user = $_SESSION['usuario'];
 
 $hora = time();
-echo "Bienvenid@!: \n".$user;
+echo "<h5 style='background-color: aqua'>"."Bienvenid@: \n".$user."</h5>";
 ?>
 <div style="background-color: white">
     <?php
@@ -111,7 +112,7 @@ if (!$esAdministrador-> num_rows> 0){
 ?>
 
     <form action="libs/CerrarSesion.php" method="post">
-        <button>Cerrar Sesión</button>
+        <button >Cerrar Sesión</button>
     </form>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

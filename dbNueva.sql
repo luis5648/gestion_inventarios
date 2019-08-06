@@ -36,9 +36,9 @@ create database inventario_ucta_t;
 			ID_Propietario INT NOT NULL,
 			ID_Usuario INT NOT NULL,
 
-			FOREIGN KEY (ID_Categoria) REFERENCES categoria (ID_Categoria),
-			FOREIGN KEY (ID_Propietario) REFERENCES propietario(ID_Propietario),
-			FOREIGN KEY (ID_Usuario) REFERENCES usuarios(ID_Usuario)
+			FOREIGN KEY (ID_Categoria) REFERENCES categoria (ID_Categoria) ON DELETE cascade on update cascade,
+			FOREIGN KEY (ID_Propietario) REFERENCES propietario(ID_Propietario)ON DELETE cascade on update cascade,
+			FOREIGN KEY (ID_Usuario) REFERENCES usuarios(ID_Usuario) ON DELETE cascade on update cascade
 
 		);
 

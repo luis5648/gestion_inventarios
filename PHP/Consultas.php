@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/TablaAll.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
 
 </head>
 <body>
@@ -13,13 +14,6 @@
 </body>
 </html>
 <?php
-/**
- * Created by PhpStorm.
- * User: luis
- * Date: 13/02/2019
- * Time: 12:42 PM
- */
-
 
 function consultarTodo($conn)
 {
@@ -32,8 +26,8 @@ function consultarTodo($conn)
 
     $result = $conn->query($stmn);
 
-    echo "<h2>Equipos en el inventario</h2>";
-    echo "<table><tr><th>ID del equipo</th> <th>Nombre del equipo</th> <th>Modelo</th><th>Marca</th><th>Ubicación</th><th>Propietario</th><th>Categoría</th><th>Número de serie</th><th>Acciones</th></tr>";
+    echo "<br> <h3>Equipos en el taller:</h3>";
+    echo "<div id='table_cont'><table><tr><th>ID del equipo</th> <th>Nombre del equipo</th> <th>Modelo</th><th>Marca</th><th>Ubicación</th><th>Propietario</th><th>Categoría</th><th>Número de serie</th><th>Acciones</th></tr>";
 
     if ($result->num_rows > 0) {
 
@@ -56,7 +50,7 @@ function consultarTodo($conn)
         echo "No se encontraron equipos en el inventario";
     }
 
-    echo "</table>";
+    echo "</table> </div>";
 }
 
 function ConsultarSinAcciones($conn)
@@ -200,7 +194,7 @@ function ConsultarPropietarios($conn){
 
 
     echo "<h6><h6>";
-    echo "<table><tr><th>ID del propietario</th><th>Nombre</th><th>Telefono</th><th>Aula</th></tr>";
+    echo "<div id='table_cont'><table><tr><th>ID del propietario</th><th>Nombre</th><th>Telefono</th><th>Aula</th></tr>";
     if ($res->num_rows > 0) {
         while ($fila = $res->fetch_assoc()) {
             echo "<tr><td>" . $fila["ID_Propietario"] . "</td>";
@@ -213,5 +207,5 @@ function ConsultarPropietarios($conn){
         }
     }
 
-    echo "</table>";
+    echo "</table></div>";
 }

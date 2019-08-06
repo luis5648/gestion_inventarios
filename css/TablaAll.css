@@ -2,8 +2,14 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+}
 
-
+#table_cont{
+    overflow-x:auto;
+    overflow-y:auto;
+    padding: 3%;
+    margin: 3%;
+    
 }
 
 td, th {
