@@ -25,15 +25,8 @@
     <link rel="stylesheet" href="../css/TablaAll.css">
     <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
     <style>
-        button{
 
-            padding: 10px;
-            margin: 15px;
-            background-color: #ccebff;
-            color: black;
-            font-size: 15px;
 
-        }
         .dropbt{
             color: black;
             padding: 16px;
@@ -43,7 +36,7 @@
         .dropdown{
             position: relative;
             display: inline-block;
-            color: white;
+            color: blue;
 
         }
         .dropcont{
@@ -63,6 +56,14 @@
             display: block;
         }
 
+        #navegacion{
+          background: rgb(213,250,240);
+          background: linear-gradient(90deg, rgba(213,250,240,1) 0%, rgba(144,232,168,0.8989247311827957) 50%, rgba(148,209,222,1) 100%);
+          position: relative;
+          border-radius: 5px;
+          padding: 10px;
+
+        }
 
     </style>
 </head>
@@ -74,30 +75,24 @@
 $user = $_SESSION['usuario'];
 
 $hora = time();
-echo "<h5 style='background-color: aqua'>"."Bienvenid@: \n".$user."</h5>";
+echo "<h5 style='background-color: aqua; border-radius:5px;   padding: 10px;'>"."Bienvenid@: \n".$user."</h5>";
 ?>
-<div style="background-color: white">
+<nav id="navegacion">
     <?php
     if ($esAdministrador->num_rows>0){
-        echo '<div class="dropdown" >';
-        echo '   <button class="dropbt">Agregar</button>';
-        echo '     <div class="dropcont">';
-        echo '       <a href="AgregarEquipos.php">Agregar equipo</a>';
-        echo '    </div>';
-        echo '</div>';
+
+        echo '   <button onclick="redirAgregar()" class="btn btn-primary">Agregar equipo</button>';
+
     }else{
         //echo $hora;
     }
 
     ?>
-    <div class="dropdown" >
-        <button class="dropbt">Buscar</button>
-        <div class="dropcont">
-            <a href="Buscar.php" >Buscar Equipo</a>
-        </div>
-    </div>
 
-</div>
+    <button onclick="redirBuscar()" class="btn btn-primary" >Buscar Equipo</button>
+
+
+</nav>
 <?php
 
 require "Consultas.php";
@@ -112,10 +107,19 @@ if (!$esAdministrador-> num_rows> 0){
 ?>
 
     <form action="libs/CerrarSesion.php" method="post">
-        <button >Cerrar Sesión</button>
+        <button class="btn btn-danger">Cerrar Sesión</button>
     </form>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../js/datos.js"></script>
+
+    <script type="text/javascript">
+        function redirAgregar(){
+          window.location = "AgregarEquipos.php";
+        }
+        function redirBuscar(){
+          window.location = "Buscar.php";
+        }
+    </script>
 </body>
 </html>
