@@ -51,8 +51,8 @@ if ($seguridad->getUsuario() == null) {
             </div>
 
             <div class="form-group">
-                <label class="form-control" style="background-color: #e6f7ff ">Falla: </label>
-                <input type="text" name="modelo" class="form-control" required>
+                <label class="form-control" style="background-color: #e6f7ff ">Descripción de la falla en el equipo: </label>
+                <input type="text" name="modelo" class="form-control" autocomplete="off" required>
             </div>
 
 
