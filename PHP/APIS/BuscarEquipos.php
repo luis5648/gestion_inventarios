@@ -12,9 +12,9 @@ if ($seguridad->getUsuario() == null) {
 
 $equipo = $_POST['busq'];
 
-strtoupper($equipo);
 
-$consulta = mysqli_query($conn,"SELECT * FROM EQUIPOS WHERE EQUIPO_DESCRIPCION LIKE '$equipo%' OR EQUIPO_PROCEDENCIA LIKE '$equipo%' ");
+
+$consulta = mysqli_query($conn,"SELECT * FROM EQUIPOS WHERE EQUIPO_DESCRIPCION LIKE '$equipo%' OR EQUIPO_PROCEDENCIA LIKE '$equipo%' OR EQUIPO_PROBLEMA LIKE '$equipo%' ");
 
 
 $JSON = array();
