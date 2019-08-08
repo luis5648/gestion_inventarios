@@ -44,7 +44,7 @@ $filas = $res->fetch_assoc();
         <input required type="text" name="modelo" class="form-control" value="<?php echo $filas["EQUIPO_PROBLEMA"]; ?>"><br>
 
         <label class="form-control" style="background-color: #e6f7ff ">Persona que recibe el equipo:</label>
-        <input required type="text" class="form-control" name="marca" disabled value="<?php echo $filas["EQUIPO_UCTA_RECIBE"]; ?>"><br>
+        <input required type="text" class="form-control" name="marca" disabled  value="<?php echo $filas["EQUIPO_UCTA_RECIBE"]; ?>"><br>
 
         <label class="form-control" style="background-color: #e6f7ff ">Persona que entrega el equipo:</label>
         <input required class="form-control" type="text" name="no_serie" value="<?php echo $filas["EQUIPO_PERSONA_ENTREGA"]; ?>"><br>
@@ -65,7 +65,7 @@ $filas = $res->fetch_assoc();
 
     //consultas para actualización
     if (isset($_POST["Actualizar"])) {
-        $idNuev = $_POST["id_equipo"];
+        
         $nombNuev = $_POST["nombre_equipo"];
         $falla = $_POST["modelo"];
         $recibe = $_POST["marca"];
@@ -73,7 +73,7 @@ $filas = $res->fetch_assoc();
         $procedencia = $_POST["ubicacion"];
 
         //actualización de datos
-        $sqlActualizar = "UPDATE EQUIPOS SET ID_EQUIPO='$idNuev', EQUIPO_DESCRIPCION='$nombNuev',
+        $sqlActualizar = "UPDATE EQUIPOS SET EQUIPO_DESCRIPCION='$nombNuev',
                    EQUIPO_PROBLEMA='$falla', EQUIPO_UCTA_RECIBE='$recibe', EQUIPO_PERSONA_ENTREGA='$entrega',
                    EQUIPO_PROCEDENCIA='$procedencia' WHERE ID_EQUIPO = '$id'";
 
