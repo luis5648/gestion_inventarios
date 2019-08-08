@@ -179,7 +179,7 @@ VALUES ('$iDequipo','$modeloEquipo','$serieEquipo','$ubicacionEquipo','$marcaEqu
     }
 
 }
-consultarTodo($conn);
+ConsultarSinAcciones($conn);
 
 // valida solo numeros en los campos:
 //onkeypress='return event.charCode >= 48 && event.charCode <= 57'
