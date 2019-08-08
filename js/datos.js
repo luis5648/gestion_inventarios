@@ -1,13 +1,25 @@
 $(document).ready(function () {
-    
+
     //consultar datos por búsqueda
-    $.ajax({
-        type: "POST",
-        url: "PHP/Consultas.php",
-        data: "data",
-        dataType: "dataType",
-        success: function (response) {
-            
-        }
-    });
+    function obtenerEquipos() {
+        $.ajax({
+            type: "GET",
+            url: "../PHP/Consultas.php",
+            success: function (response) {
+                const equipos = JSON.parse(response); //recibe el json con los datos de equipos
+
+                let tabla = ''; //variable para escribir la tabla
+                equipos.forEach(element => {
+                    tabla += `
+                        <tr>
+                            
+                        
+                        </tr>
+                    
+                    
+                    `
+                });
+            }
+        });
+    }
 });

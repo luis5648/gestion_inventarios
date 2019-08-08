@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "inventario_ucta_t";
+$dbname = "recepcion_equipos";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);

@@ -20,29 +20,28 @@ function consultarTodo($conn)
     
     $usuario = $_SESSION["usuario"];
 
-    $stmn = "SELECT ID_Equipo, Modelo, N_serie, Ubicacion, Marca, Descripcion, Nombre_Categoria, Nombre_Propietario FROM equipos inner join
-  categoria c on equipos.ID_Categoria = c.ID_Categoria inner join propietario p on equipos.ID_Propietario = p.ID_Propietario ORDER BY ID_Equipo DESC";
+    $stmn = "SELECT * FROM EQUIPOS ";
 
 
     $result = $conn->query($stmn);
 
     echo "<br> <h3>Equipos en el taller:</h3>";
-    echo "<div id='table_cont'><table><tr><th>ID del equipo</th> <th>Nombre del equipo</th> <th>Modelo</th><th>Marca</th><th>Ubicación</th><th>Propietario</th><th>Categoría</th><th>Número de serie</th><th>Acciones</th></tr>";
+    echo "<div id='table_cont'><table><tr><th>ID del equipo</th> <th>Equipo</th> <th>Falla</th><th>Recibió</th><th>Entrego</th><th>Teléfono</th><th>Procedencia</th><th>Fecha de entrega</th><th>Acciones</th></tr>";
 
     if ($result->num_rows > 0) {
 
 
         while ($fila = $result->fetch_assoc()) {
 
-            echo "<tr><td>" . $fila["ID_Equipo"] . "</td>";
-            echo "<td>" . $fila["Descripcion"] . "</td>";
-            echo "<td>" . $fila["Modelo"] . "</td>";
-            echo "<td>" . $fila["Marca"] . "</td>";
-            echo "<td>" . $fila["Ubicacion"] . "</td>";
-            echo "<td>" . $fila["Nombre_Propietario"] . "</td>";
-            echo "<td>" . $fila["Nombre_Categoria"] . "</td>";
-            echo "<td>" . $fila["N_serie"] . "</td>";
-            echo "<td><a href=\"Modificar.php?id=".base64_encode($fila['ID_Equipo'])."\">Modificar</a> | <a href=\"Eliminar.php?id=".base64_encode($fila['ID_Equipo'])."&id_user=".base64_encode($usuario)."\" onClick=\"return confirm('¿Está seguro que desea eliminar el registro?')\">Eliminar</a></td></tr>";
+            echo "<tr><td>" . $fila["ID_EQUIPO"] . "</td>";
+            echo "<td>" . $fila["EQUIPO_DESCRIPCION"] . "</td>";
+            echo "<td>" . $fila["EQUIPO_PROBLEMA"] . "</td>";
+            echo "<td>" . $fila["EQUIPO_UCTA_RECIBE"] . "</td>";
+            echo "<td>" . $fila["EQUIPO_PERSONA_ENTREGA"] . "</td>";
+            echo "<td>" . $fila["EQUIPO_TELEFONO_PERSONA"] . "</td>";
+            echo "<td>" . $fila["EQUIPO_PROCEDENCIA"] . "</td>";
+            echo "<td>" . $fila["EQUIPO_FECHA"] . "</td>";
+            echo "<td><a href=\"Modificar.php?w=".base64_encode($fila['ID_EQUIPO'])."\">Modificar</a> | <a href=\"Eliminar.php?w=".base64_encode($fila['ID_EQUIPO'])."&y=".base64_encode($usuario)."\" onClick=\"return confirm('¿Está seguro que desea eliminar el registro?')\">Eliminar</a></td></tr>";
 
 
         }
@@ -62,8 +61,8 @@ function ConsultarSinAcciones($conn)
 
     $result = $conn->query($stmn);
 
-    echo "<h2>Equipos en el inventario</h2>";
-    echo "<table><tr><th>ID del equipo</th> <th>Nombre del equipo</th> <th>Modelo</th><th>Marca</th><th>Ubicación</th><th>Propietario</th><th>Categoría</th><th>Número de serie</th></tr>";
+    echo "<br> <h3>Equipos en el taller:</h3>";
+    echo "<div id='table_cont'><table><tr><th>ID del equipo</th> <th>Nombre del equipo</th> <th>Modelo</th><th>Marca</th><th>Ubicación</th><th>Propietario</th><th>Categoría</th><th>Número de serie</th></tr>";
 
     if ($result->num_rows > 0) {
 
@@ -83,7 +82,7 @@ function ConsultarSinAcciones($conn)
         }
     }
 
-    echo "</table>";
+    echo "</table></div>";
 }
 
 function buscaID($conn, $condicion)
