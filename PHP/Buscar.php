@@ -42,11 +42,11 @@ if ($seguridad->getUsuario() == null) {
 <body style="background-color: #c9d0d1">
 
     <nav class="navbar navbar-black">
-        <input type="search" class="form-control" id="buscarEquipo" placeholder="Nombre/descripción del equipo">
+        <input type="search" class="form-control" id="buscarEquipo" placeholder="Buscar Equipo">
         <button class="btn btn-success" id="btnBuscar">Buscar</button>
     </nav>
 
-    <h3>Lista de equipos pendientes:</h3>
+    <h4>Lista de equipos pendientes:</h4>
 
     <div id="table_cont">
         <table class="table " id="tablaDatos">

@@ -1,9 +1,11 @@
 <?php
 require "libs/Seguridad.php";
 require "libs/Conexion.php";
+//require "Consultas.php";
 $seguridad = new Seguridad();
 $VAL = "ADMINISTRADOR";
 $usuarioEnSesion = $seguridad->getUsuario();
+$acciones = '';
 
 $esAdministrador = mysqli_query($conn, "SELECT * FROM usuarios WHERE Administrador = '$VAL' and nombre_Usuario = '$usuarioEnSesion'");
 
@@ -11,6 +13,26 @@ if ($seguridad->getUsuario() == null) {
     header('Location: ../index.php');
     exit;
 }
+
+/*
+    El objetivo del siguiente código es el de obtener las acciones
+    para las tablas (modificar y eliminar) para que se manejen
+    mediante código php y no con ajax
+*/
+$usuario = $_SESSION["usuario"];
+$stmn = "SELECT * FROM EQUIPOS ";
+$result = $conn->query($stmn);
+if ($result->num_rows > 0) {
+
+
+    while ($fila = $result->fetch_assoc()) {
+        $acciones = "<td><a href=\"Modificar.php?w=" . base64_encode($fila['ID_EQUIPO']) . "\">Modificar</a> | <a href=\"Eliminar.php?w=" . base64_encode($fila['ID_EQUIPO']) ."\" onClick=\"return confirm('¿Está seguro que desea eliminar el registro?')\">Eliminar</a></td>";
+    }
+} else {
+    echo "No se encontraron equipos en el inventario";
+}
+
+echo "</table> </div>";
 
 ?>
 
@@ -61,7 +83,7 @@ if ($seguridad->getUsuario() == null) {
         #navegacion {
             background: rgb(213, 250, 240);
             background: linear-gradient(90deg, rgba(213, 250, 240, 1) 0%, rgba(144, 232, 168, 0.8989247311827957) 50%, rgba(148, 209, 222, 1) 100%);
-            position: relative;
+
             border-radius: 5px;
             padding: 10px;
 
@@ -79,7 +101,7 @@ if ($seguridad->getUsuario() == null) {
     $hora = time();
     echo "<h5 style='background-color: aqua; border-radius:5px;   padding: 10px;'>" . "Bienvenid@: \n" . $user . "</h5>";
     ?>
-    <nav id="navegacion" class="navbar">
+    <nav id="navegacion" class="navbar navbar-black">
         <?php
         if ($esAdministrador->num_rows > 0) {
 
@@ -90,7 +112,8 @@ if ($seguridad->getUsuario() == null) {
 
         ?>
 
-        <button onclick="redirBuscar()" class="btn btn-primary">Buscar Equipo</button>
+        <input type="search" style="width: 50%;" class="form-control" id="buscarEquipo" placeholder="Buscar Equipo">
+       
 
 
     </nav>
@@ -98,29 +121,185 @@ if ($seguridad->getUsuario() == null) {
 
     require "Consultas.php";
 
-    if (!$esAdministrador->num_rows > 0) {
-        ConsultarSinAcciones($conn);
-    } else {
-        consultarTodo($conn);
-    }
+    if (!$esAdministrador->num_rows > 0) { // ConsultarSinAcciones($conn);
+        ?>
+        <div id="table_cont">
+            <table class="table " id="tablaDatos">
+                <thead>
+                    <tr>
+                        <th scope="col">ID Equipo</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripción de la falla</th>
+                        <th scope="col">Recibio</th>
+                        <th scope="col">Entrego</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Procedencia</th>
+                        <th scope="col">Ingreso al taller</th>
+
+                    </tr>
+                </thead>
+                <tbody id="resEquipos">
+
+                </tbody>
+            </table>
+        </div>
+
+    <?php
+    } else { //consultarTodo($conn);
+        ?>
+
+        <div id="table_cont">
+            <table class="table " id="tablaDatos">
+                <thead>
+                    <tr>
+                        <th scope="col">ID Equipo</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripción de la falla</th>
+                        <th scope="col">Recibio</th>
+                        <th scope="col">Entrego</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Procedencia</th>
+                        <th scope="col">Ingreso al taller</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="resEquipos2">
+
+                </tbody>
+            </table>
+        </div>
+    <?php   } ?>
 
 
-    ?>
+
 
     <form action="libs/CerrarSesion.php" method="post">
         <button class="btn btn-danger">Cerrar Sesión</button>
     </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../js/datos.js"></script>
+    <script>
+        $(document).ready(function() {
+            obtenerEquipos();
+
+            $('#buscarEquipo').keyup(function(e) {
+                let busq = $('#buscarEquipo').val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "../PHP/APIS/BuscarEquipos.php",
+                    data: {
+                        busq
+                    },
+
+                    success: function(response) {
+                        const equipos = JSON.parse(response); //recibe el json con los datos de equipos
+                        let tabla = ''; //variable para escribir la tabla
+                        let tablaA = '';
+                        equipos.forEach(element => {
+                            tabla += `
+                    <tr>
+
+                        <td>${element.id}</td>
+                        <td>${element.descripcion}</td>
+                        <td>${element.falla}</td>
+                        <td>${element.recibio}</td>
+                        <td>${element.entrego}</td>
+                        <td>${element.telefono}</td>
+                        <td>${element.procedencia}</td>
+                        <td>${element.fecha}</td>
+
+                    </tr>
+
+
+                `
+
+                        });
+                        equipos.forEach(element => {
+                            tablaA += `
+                    <tr>
+
+                        <td>${element.id}</td>
+                        <td>${element.descripcion}</td>
+                        <td>${element.falla}</td>
+                        <td>${element.recibio}</td>
+                        <td>${element.entrego}</td>
+                        <td>${element.telefono}</td>
+                        <td>${element.procedencia}</td>
+                        <td>${element.fecha}</td>
+                        <?php echo $acciones; ?>
+
+                    </tr>`
+
+                        });
+                        $('#resEquipos').html(tabla);
+                        $('#resEquipos2').html(tablaA);
+                    }
+                });
+
+            });
+
+            //consultar datos por búsqueda
+            function obtenerEquipos() {
+
+                $.ajax({
+                    type: "POST",
+                    url: "../PHP/APIS/MostrarEquipos.php",
+                    success: function(response) {
+
+                        const equipos = JSON.parse(response); //recibe el json con los datos de equipos
+                        let tabla = ''; //variable para escribir la tabla sin acciones
+                        let tablaA = ''; //variable para escribir la tabla con acciones
+                        equipos.forEach(element => {
+                            tabla += `
+                    <tr>
+
+                        <td>${element.id}</td>
+                        <td>${element.descripcion}</td>
+                        <td>${element.falla}</td>
+                        <td>${element.recibio}</td>
+                        <td>${element.entrego}</td>
+                        <td>${element.telefono}</td>
+                        <td>${element.procedencia}</td>
+                        <td>${element.fecha}</td>
+
+                    </tr>
+
+
+                `
+
+                        });
+                        equipos.forEach(element => {
+                            tablaA += `
+                    <tr>
+
+                        <td>${element.id}</td>
+                        <td>${element.descripcion}</td>
+                        <td>${element.falla}</td>
+                        <td>${element.recibio}</td>
+                        <td>${element.entrego}</td>
+                        <td>${element.telefono}</td>
+                        <td>${element.procedencia}</td>
+                        <td>${element.fecha}</td>
+                        <?php echo $acciones; ?>
+
+                    </tr>
+
+
+                `
+                        });
+                        $('#resEquipos').html(tabla);
+                        $('#resEquipos2').html(tablaA);
+
+                    }
+                });
+            }
+        });
+    </script>
 
     <script type="text/javascript">
         function redirAgregar() {
             window.location = "AgregarEquipos.php";
-        }
-
-        function redirBuscar() {
-            window.location = "Buscar.php";
         }
     </script>
 </body>
