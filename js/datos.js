@@ -14,6 +14,7 @@ $(document).ready(function () {
             success: function (response) {
                 const equipos = JSON.parse(response); //recibe el json con los datos de equipos
                 let tabla = ''; //variable para escribir la tabla
+                let tablaA = '';
                 equipos.forEach(element => {
                     tabla += `
                     <tr>
@@ -31,8 +32,34 @@ $(document).ready(function () {
 
 
                 `
-                    $('#resEquipos').html(tabla);
+                   
                 });
+                equipos.forEach(element => {
+                    tablaA += `
+                    <tr>
+
+                        <td>${element.id}</td>
+                        <td>${element.descripcion}</td>
+                        <td>${element.falla}</td>
+                        <td>${element.recibio}</td>
+                        <td>${element.entrego}</td>
+                        <td>${element.telefono}</td>
+                        <td>${element.procedencia}</td>
+                        <td>${element.fecha}</td>
+                        <td><ul>
+                            <li><a href="#">Eliminar</a></li>
+                            <li><a href="#">Modificar</a></li>
+                            <li><a href="#">Cambiar status</a></li>
+                        </ul></td>
+                       
+
+                    </tr>
+
+
+                ` 
+                });
+                $('#resEquipos').html(tabla);
+                $('#resEquipos2').html(tablaA);
             }
         });
 
@@ -80,7 +107,11 @@ $(document).ready(function () {
                         <td>${element.telefono}</td>
                         <td>${element.procedencia}</td>
                         <td>${element.fecha}</td>
-                        <td><a href=\"Modificar.php?w=".base64_encode($fila['ID_EQUIPO'])."\">Modificar</a> | <a href=\"Eliminar.php?w=".base64_encode($fila['ID_EQUIPO'])."&y=".base64_encode($usuario)."\" onClick=\"return confirm('¿Está seguro que desea eliminar el registro?')\">Eliminar</a></td></tr>
+                        <td><ul>
+                            <li><a href="#">Eliminar</a></li>
+                            <li><a href="#">Modificar</a></li>
+                            <li><a href="#">Cambiar status</a></li>
+                        </ul></td>
 
                     </tr>
 

@@ -11,7 +11,7 @@ if ($seguridad->getUsuario() == null) {
 
 $id = base64_decode($_GET["w"]);
 
-$_SESSION['id'] = $id;
+//$_SESSION['id'] = $id;
 $consulta = "SELECT * FROM EQUIPOS WHERE ID_EQUIPO='$id'";
 $res = $conn->query($consulta);
 $filas = $res->fetch_assoc();

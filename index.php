@@ -39,7 +39,7 @@
 					</span>
 					
 					<div class="wrap-input100 rs1 validate-input" data-validate = "Username is required">
-						<input class="input100" type="text" name="username">
+						<input class="input100" type="text" autocomplete="off" name="username">
 						<span class="label-input100">Nombre de usuario</span>
 					</div>
 					

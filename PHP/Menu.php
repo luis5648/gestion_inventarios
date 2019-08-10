@@ -5,7 +5,6 @@ require "libs/Conexion.php";
 $seguridad = new Seguridad();
 $VAL = "ADMINISTRADOR";
 $usuarioEnSesion = $seguridad->getUsuario();
-$acciones = '';
 
 $esAdministrador = mysqli_query($conn, "SELECT * FROM usuarios WHERE Administrador = '$VAL' and nombre_Usuario = '$usuarioEnSesion'");
 
@@ -19,20 +18,28 @@ if ($seguridad->getUsuario() == null) {
     para las tablas (modificar y eliminar) para que se manejen
     mediante código php y no con ajax
 */
-$usuario = $_SESSION["usuario"];
-$stmn = "SELECT * FROM EQUIPOS ";
-$result = $conn->query($stmn);
-if ($result->num_rows > 0) {
+
+function lastRows($conn){
+    $acciones = '';
+
+    $stmn = "SELECT * FROM EQUIPOS ";
+    $result = $conn->query($stmn);
+    if ($result->num_rows > 0) {
+        $fila = $result->fetch_assoc();
+        
+       // while ($fila = $result->fetch_assoc()) {
 
 
-    while ($fila = $result->fetch_assoc()) {
-        $acciones = "<td><a href=\"Modificar.php?w=" . base64_encode($fila['ID_EQUIPO']) . "\">Modificar</a> | <a href=\"Eliminar.php?w=" . base64_encode($fila['ID_EQUIPO']) ."\" onClick=\"return confirm('¿Está seguro que desea eliminar el registro?')\">Eliminar</a></td>";
+            echo  "<td><a href=\"Modificar.php?w=" . base64_encode($fila['ID_EQUIPO']) . "\">Modificar</a> | <a href=\"Eliminar.php?w=" . base64_encode($fila['ID_EQUIPO']) ."\" onClick=\"return confirm('¿Está seguro que desea eliminar el registro?')\">Eliminar</a> | <a href=\"Resueltos.php?y=".base64_encode($fila['ID_EQUIPO'])."\" onClick=\"return confirm('¿Está seguro que desea cambiar el status del equipo a resuelto?')\"> Cambiar status </a></td>";
+            //return $acciones;
+        //}
+    } else {
+        $acciones = "No se encontraron equipos en el inventario";
+        //return $acciones;
     }
-} else {
-    echo "No se encontraron equipos en el inventario";
+    
 }
 
-echo "</table> </div>";
 
 ?>
 
@@ -178,124 +185,8 @@ echo "</table> </div>";
     </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            obtenerEquipos();
-
-            $('#buscarEquipo').keyup(function(e) {
-                let busq = $('#buscarEquipo').val();
-
-                $.ajax({
-                    type: "POST",
-                    url: "../PHP/APIS/BuscarEquipos.php",
-                    data: {
-                        busq
-                    },
-
-                    success: function(response) {
-                        const equipos = JSON.parse(response); //recibe el json con los datos de equipos
-                        let tabla = ''; //variable para escribir la tabla
-                        let tablaA = '';
-                        equipos.forEach(element => {
-                            tabla += `
-                    <tr>
-
-                        <td>${element.id}</td>
-                        <td>${element.descripcion}</td>
-                        <td>${element.falla}</td>
-                        <td>${element.recibio}</td>
-                        <td>${element.entrego}</td>
-                        <td>${element.telefono}</td>
-                        <td>${element.procedencia}</td>
-                        <td>${element.fecha}</td>
-
-                    </tr>
-
-
-                `
-
-                        });
-                        equipos.forEach(element => {
-                            tablaA += `
-                    <tr>
-
-                        <td>${element.id}</td>
-                        <td>${element.descripcion}</td>
-                        <td>${element.falla}</td>
-                        <td>${element.recibio}</td>
-                        <td>${element.entrego}</td>
-                        <td>${element.telefono}</td>
-                        <td>${element.procedencia}</td>
-                        <td>${element.fecha}</td>
-                        <?php echo $acciones; ?>
-
-                    </tr>`
-
-                        });
-                        $('#resEquipos').html(tabla);
-                        $('#resEquipos2').html(tablaA);
-                    }
-                });
-
-            });
-
-            //consultar datos por búsqueda
-            function obtenerEquipos() {
-
-                $.ajax({
-                    type: "POST",
-                    url: "../PHP/APIS/MostrarEquipos.php",
-                    success: function(response) {
-
-                        const equipos = JSON.parse(response); //recibe el json con los datos de equipos
-                        let tabla = ''; //variable para escribir la tabla sin acciones
-                        let tablaA = ''; //variable para escribir la tabla con acciones
-                        equipos.forEach(element => {
-                            tabla += `
-                    <tr>
-
-                        <td>${element.id}</td>
-                        <td>${element.descripcion}</td>
-                        <td>${element.falla}</td>
-                        <td>${element.recibio}</td>
-                        <td>${element.entrego}</td>
-                        <td>${element.telefono}</td>
-                        <td>${element.procedencia}</td>
-                        <td>${element.fecha}</td>
-
-                    </tr>
-
-
-                `
-
-                        });
-                        equipos.forEach(element => {
-                            tablaA += `
-                    <tr>
-
-                        <td>${element.id}</td>
-                        <td>${element.descripcion}</td>
-                        <td>${element.falla}</td>
-                        <td>${element.recibio}</td>
-                        <td>${element.entrego}</td>
-                        <td>${element.telefono}</td>
-                        <td>${element.procedencia}</td>
-                        <td>${element.fecha}</td>
-                        <?php echo $acciones; ?>
-
-                    </tr>
-
-
-                `
-                        });
-                        $('#resEquipos').html(tabla);
-                        $('#resEquipos2').html(tablaA);
-
-                    }
-                });
-            }
-        });
-    </script>
+    
+    <script src="../js/datos.js"></script>
 
     <script type="text/javascript">
         function redirAgregar() {
