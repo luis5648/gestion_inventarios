@@ -124,6 +124,8 @@ function lastRows($conn){
 
 
     </nav>
+    <br><br>
+    <h3>Equipos en el taller: </h3>
     <?php
 
     require "Consultas.php";

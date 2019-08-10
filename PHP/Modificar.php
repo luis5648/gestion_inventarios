@@ -89,7 +89,7 @@ $filas = $res->fetch_assoc();
             echo "<script>alert('Equipo Actualizado!');</script>";
         }
     }
-    consultarSinAcciones($conn);
+    consultarTodo($conn);
 
     ?>
 
