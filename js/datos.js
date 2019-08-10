@@ -36,24 +36,23 @@ $(document).ready(function () {
                 });
                 equipos.forEach(element => {
                     tablaA += `
-                    <tr>
+                    <tr idEquipo="${element.id}">
 
-                        <td>${element.id}</td>
-                        <td>${element.descripcion}</td>
-                        <td>${element.falla}</td>
-                        <td>${element.recibio}</td>
-                        <td>${element.entrego}</td>
-                        <td>${element.telefono}</td>
-                        <td>${element.procedencia}</td>
-                        <td>${element.fecha}</td>
-                        <td><ul>
-                            <li><a href="#">Eliminar</a></li>
-                            <li><a href="#">Modificar</a></li>
-                            <li><a href="#">Cambiar status</a></li>
-                        </ul></td>
-                       
+                    <td>${element.id}</td>
+                    <td>${element.descripcion}</td>
+                    <td>${element.falla}</td>
+                    <td>${element.recibio}</td>
+                    <td>${element.entrego}</td>
+                    <td>${element.telefono}</td>
+                    <td>${element.procedencia}</td>
+                    <td>${element.fecha}</td>
+                    <td><ul>
+                        <li><a href="#" class="eliminarEquipo">Eliminar</a></li>
+                        <li><a href="#" class="modificarEquipo">Modificar</a></li>
+                        <li><a href="#" class="cambiarStatus">Cambiar status</a></li>
+                    </ul></td>
 
-                    </tr>
+                </tr>
 
 
                 ` 
@@ -97,7 +96,7 @@ $(document).ready(function () {
                 });
                 equipos.forEach(element => {
                     tablaA += `
-                    <tr>
+                    <tr idEquipo="${element.id}">
 
                         <td>${element.id}</td>
                         <td>${element.descripcion}</td>
@@ -108,9 +107,9 @@ $(document).ready(function () {
                         <td>${element.procedencia}</td>
                         <td>${element.fecha}</td>
                         <td><ul>
-                            <li><a href="#">Eliminar</a></li>
-                            <li><a href="#">Modificar</a></li>
-                            <li><a href="#">Cambiar status</a></li>
+                            <li><a href="#" class="eliminarEquipo">Eliminar</a></li>
+                            <li><a href="#" class="modificarEquipo">Modificar</a></li>
+                            <li><a href="#" class="cambiarStatus">Cambiar status</a></li>
                         </ul></td>
 
                     </tr>
@@ -124,4 +123,33 @@ $(document).ready(function () {
             }
         });
     }
+
+    // para editar registros:
+
+    $(document).on('click', '.modificarEquipo', function () {
+        let element = $(this)[0].parentElement.parentElement.parentElement.parentElement;
+        let id = $(element).attr('idEquipo');
+
+        
+        window.location = "Modificar.php?w="+btoa(id);
+    });
+
+    //Para eliminar registros
+
+    $(document).on('click', '.eliminarEquipo', function () {
+        let element = $(this)[0].parentElement.parentElement.parentElement.parentElement;
+        let id = $(element).attr('idEquipo');
+
+        
+        window.location = "Eliminar.php?w="+btoa(id);
+    });
+
+    //para cambiar status
+    $(document).on('click', '.cambiarStatus', function () {
+        let element = $(this)[0].parentElement.parentElement.parentElement.parentElement;
+        let id = $(element).attr('idEquipo');
+
+        
+        window.location = "Modificar.php?w="+btoa(id);
+    });
 });
