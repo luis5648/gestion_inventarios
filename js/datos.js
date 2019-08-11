@@ -140,8 +140,10 @@ $(document).ready(function () {
         let element = $(this)[0].parentElement.parentElement.parentElement.parentElement;
         let id = $(element).attr('idEquipo');
 
+        if (confirm("¿Está seguro que desea eliminar el elemento seleccionado?")) {
+            window.location = "Eliminar.php?w="+btoa(id);    
+        }
         
-        window.location = "Eliminar.php?w="+btoa(id);
     });
 
     //para cambiar status
@@ -149,7 +151,9 @@ $(document).ready(function () {
         let element = $(this)[0].parentElement.parentElement.parentElement.parentElement;
         let id = $(element).attr('idEquipo');
 
+        if (confirm("¿Está seguro que desea cambiar status a resuelto?")) {
+            window.location = "Resueltos.php?y="+btoa(id);
+        } 
         
-        window.location = "Modificar.php?w="+btoa(id);
     });
 });

@@ -102,7 +102,7 @@ VALUES ('$nombreEquipo','$falla','$entrega','$usuarioEnSesion','$Telefono','$ubi
             echo mysqli_error($conn);
         }
     }
-    ConsultarSinAcciones($conn);
+    consultarTodo($conn);
 
     // valida solo numeros en los campos:
     //onkeypress='return event.charCode >= 48 && event.charCode <= 57'

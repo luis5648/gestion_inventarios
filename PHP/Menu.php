@@ -1,7 +1,7 @@
 <?php
 require "libs/Seguridad.php";
 require "libs/Conexion.php";
-//require "Consultas.php";
+
 $seguridad = new Seguridad();
 $VAL = "ADMINISTRADOR";
 $usuarioEnSesion = $seguridad->getUsuario();
@@ -19,25 +19,25 @@ if ($seguridad->getUsuario() == null) {
     mediante código php y no con ajax
 */
 
-function lastRows($conn){
+function lastRows($conn)
+{
     $acciones = '';
 
     $stmn = "SELECT * FROM EQUIPOS ";
     $result = $conn->query($stmn);
     if ($result->num_rows > 0) {
         $fila = $result->fetch_assoc();
-        
-       // while ($fila = $result->fetch_assoc()) {
+
+        // while ($fila = $result->fetch_assoc()) {
 
 
-            echo  "<td><a href=\"Modificar.php?w=" . base64_encode($fila['ID_EQUIPO']) . "\">Modificar</a> | <a href=\"Eliminar.php?w=" . base64_encode($fila['ID_EQUIPO']) ."\" onClick=\"return confirm('¿Está seguro que desea eliminar el registro?')\">Eliminar</a> | <a href=\"Resueltos.php?y=".base64_encode($fila['ID_EQUIPO'])."\" onClick=\"return confirm('¿Está seguro que desea cambiar el status del equipo a resuelto?')\"> Cambiar status </a></td>";
-            //return $acciones;
+        echo  "<td><a href=\"Modificar.php?w=" . base64_encode($fila['ID_EQUIPO']) . "\">Modificar</a> | <a href=\"Eliminar.php?w=" . base64_encode($fila['ID_EQUIPO']) . "\" onClick=\"return confirm('¿Está seguro que desea eliminar el registro?')\">Eliminar</a> | <a href=\"Resueltos.php?y=" . base64_encode($fila['ID_EQUIPO']) . "\" onClick=\"return confirm('¿Está seguro que desea cambiar el status del equipo a resuelto?')\"> Cambiar status </a></td>";
+        //return $acciones;
         //}
     } else {
         $acciones = "No se encontraron equipos en el inventario";
         //return $acciones;
     }
-    
 }
 
 
@@ -120,12 +120,12 @@ function lastRows($conn){
         ?>
 
         <input type="search" style="width: 50%;" class="form-control" id="buscarEquipo" placeholder="Buscar Equipo">
-       
+
 
 
     </nav>
     <br><br>
-    <h3>Equipos en el taller: </h3>
+    <h4>Equipos en pendientes en el taller: </h4>
     <?php
 
     require "Consultas.php";
@@ -179,7 +179,29 @@ function lastRows($conn){
         </div>
     <?php   } ?>
 
+    <div id="entregados">
+        <h4>Equipos reparados y entregados</h4>
+        <div id="table_cont">
+            <table class="table " id="tablaDatos">
+                <thead>
+                    <tr>
+                        <th scope="col">ID Equipo</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripción de la falla</th>
+                        <th scope="col">Recibio</th>
+                        <th scope="col">Entrego</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Procedencia</th>
+                        <th scope="col">Ingreso al taller</th>
 
+                    </tr>
+                </thead>
+                <tbody id="resEquiposListos">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 
     <form action="libs/CerrarSesion.php" method="post">
@@ -187,7 +209,7 @@ function lastRows($conn){
     </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+
     <script src="../js/datos.js"></script>
 
     <script type="text/javascript">

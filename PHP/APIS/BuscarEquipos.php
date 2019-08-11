@@ -14,7 +14,7 @@ $equipo = $_POST['busq'];
 
 
 
-$consulta = mysqli_query($conn,"SELECT * FROM EQUIPOS WHERE EQUIPO_DESCRIPCION LIKE '$equipo%' OR EQUIPO_PROCEDENCIA LIKE '$equipo%' OR EQUIPO_PROBLEMA LIKE '$equipo%' ");
+$consulta = mysqli_query($conn,"SELECT * FROM EQUIPOS WHERE EQUIPO_DESCRIPCION LIKE '$equipo%' OR EQUIPO_PROCEDENCIA LIKE '$equipo%' OR EQUIPO_PROBLEMA LIKE '$equipo%' WHERE STATUS = 'PENDIENTE'");
 
 
 $JSON = array();

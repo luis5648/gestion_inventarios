@@ -35,7 +35,8 @@ $filas = $res->fetch_assoc();
     <h3 style="margin-left: 5%; margin-top: 2%">Modificar Equipo</h3>
     <form action="" method="post" style="padding: 10%;text-align: center;" class="form-group">
         <!-- <label for="" class="form-control" style="background-color: #e6f7ff ">ID Equipo</label>
-        <input required type="text" name="id_equipo" class="form-control" value="<?php //echo $filas["ID_EQUIPO"]; ?>"><br> -->
+        <input required type="text" name="id_equipo" class="form-control" value="<?php //echo $filas["ID_EQUIPO"]; 
+                                                                                    ?>"><br> -->
 
         <label class="form-control" style="background-color: #e6f7ff ">Nombre (Descripción del equipo):</label>
         <input required type="text" class="form-control" name="nombre_equipo" value="<?php echo $filas["EQUIPO_DESCRIPCION"]; ?>"><br>
@@ -44,7 +45,7 @@ $filas = $res->fetch_assoc();
         <input required type="text" name="modelo" class="form-control" value="<?php echo $filas["EQUIPO_PROBLEMA"]; ?>"><br>
 
         <label class="form-control" style="background-color: #e6f7ff ">Persona que recibe el equipo:</label>
-        <input required type="text" class="form-control" name="marca" value="<?php echo $filas["EQUIPO_UCTA_RECIBE"]; ?>" disabled  ><br>
+        <input required type="text" class="form-control" name="marca" value="<?php echo $filas["EQUIPO_UCTA_RECIBE"]; ?>" disabled><br>
 
         <label class="form-control" style="background-color: #e6f7ff ">Persona que entrega el equipo:</label>
         <input required class="form-control" type="text" name="no_serie" value="<?php echo $filas["EQUIPO_PERSONA_ENTREGA"]; ?>"><br>
@@ -55,7 +56,7 @@ $filas = $res->fetch_assoc();
         <label class="form-control" style="background-color: #e6f7ff ">Procedencia:</label>
         <input required class="form-control" type="text" name="ubicacion" value="<?php echo $filas["EQUIPO_PROCEDENCIA"]; ?>"><br>
 
-       
+
 
 
         <br><br><button class='btn btn-secondary' name='Actualizar'>Actualizar</button>
@@ -70,10 +71,10 @@ $filas = $res->fetch_assoc();
 
     //consultas para actualización
     if (isset($_POST["Actualizar"])) {
-        
+
         $nombNuev = $_POST["nombre_equipo"];
         $falla = $_POST["modelo"];
-       
+
         $entrega = $_POST["no_serie"];
         $procedencia = $_POST["ubicacion"];
         $telefono = $_POST["telefono"];
@@ -84,7 +85,7 @@ $filas = $res->fetch_assoc();
                    EQUIPO_PROCEDENCIA='$procedencia', EQUIPO_TELEFONO_PERSONA='$telefono' WHERE ID_EQUIPO = '$id'";
 
         if (!$conn->query($sqlActualizar)) {
-            echo "<script>alert('Hubo un error al actualizar.".mysqli_error($conn)."');</script>";
+            echo "<script>alert('Hubo un error al actualizar." . mysqli_error($conn) . "');</script>";
         } else {
             echo "<script>alert('Equipo Actualizado!');</script>";
         }

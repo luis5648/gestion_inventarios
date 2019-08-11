@@ -13,7 +13,7 @@ if ($seguridad->getUsuario() == null) {
 
 
 
-$consulta  = mysqli_query($conn, "SELECT * FROM EQUIPOS");
+$consulta  = mysqli_query($conn, "SELECT * FROM EQUIPOS WHERE STATUS = 'PENDIENTE'");
 
 $JSON = array();
 
