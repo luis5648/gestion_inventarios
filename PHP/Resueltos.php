@@ -68,7 +68,7 @@ $filas = $consultaEquipos->fetch_assoc();
         $recibe = $_POST['recibePersona'];
         $status = "RESUELTO";
 
-         $actualizarStatus = mysqli_query($conn,"UPDATE EQUIPOS SET STATUS = '$status' WHERE ID_EQUIPO = '$idEquipo'");
+         $actualizarStatus = mysqli_query($conn,"UPDATE EQUIPOS SET ESTADO = '$status' WHERE ID_EQUIPO = '$idEquipo'");
 
         $insertarResueltos = "INSERT INTO EQUIPOS_LISTOS(ID_EQUIPO, DIAGNOSTICO, UCTA_ENTREGA, PERSONA_RECIBE) VALUES ('$idEquipo','$diagnostico','$usuarioEnSesion','$recibe')";
 

@@ -11,10 +11,10 @@ if ($seguridad->getUsuario() == null) {
 }
 
 $equipo = $_POST['busq'];
+$status = 'PENDIENTE';
 
 
-
-$consulta = mysqli_query($conn,"SELECT * FROM EQUIPOS WHERE EQUIPO_DESCRIPCION LIKE '$equipo%' OR EQUIPO_PROCEDENCIA LIKE '$equipo%' OR EQUIPO_PROBLEMA LIKE '$equipo%' WHERE STATUS = 'PENDIENTE'");
+$consulta = mysqli_query($conn,"SELECT * FROM EQUIPOS WHERE EQUIPO_DESCRIPCION LIKE '$equipo%' OR EQUIPO_PROCEDENCIA LIKE '$equipo%' OR EQUIPO_PROBLEMA LIKE '$equipo%' AND ESTADO = '$status'");
 
 
 $JSON = array();

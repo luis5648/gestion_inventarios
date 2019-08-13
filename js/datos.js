@@ -13,8 +13,10 @@ $(document).ready(function () {
 
             success: function (response) {
                 const equipos = JSON.parse(response); //recibe el json con los datos de equipos
+                
                 let tabla = ''; //variable para escribir la tabla
                 let tablaA = '';
+                console.log(equipos);
                 equipos.forEach(element => {
                     tabla += `
                     <tr>
