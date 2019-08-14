@@ -93,16 +93,20 @@ if ($seguridad->getUsuario() == null) {
         $STATUS = "PENDIENTE";
 
         
-        $sqlNuevoEquipo = "INSERT INTO EQUIPOS(EQUIPO_DESCRIPCION, EQUIPO_PROBLEMA, EQUIPO_PERSONA_ENTREGA, EQUIPO_UCTA_RECIBE, EQUIPO_TELEFONO_PERSONA, EQUIPO_PROCEDENCIA, STATUS, EQUIPO_FECHA)  
+        $sqlNuevoEquipo = "INSERT INTO EQUIPOS(EQUIPO_DESCRIPCION, EQUIPO_PROBLEMA, EQUIPO_PERSONA_ENTREGA, EQUIPO_UCTA_RECIBE, EQUIPO_TELEFONO_PERSONA, EQUIPO_PROCEDENCIA, ESTADO, EQUIPO_FECHA)  
 VALUES ('$nombreEquipo','$falla','$entrega','$usuarioEnSesion','$Telefono','$ubicacionEquipo','$STATUS', NOW()) ";
 
         if ($conn->query($sqlNuevoEquipo) === TRUE) {
-            echo "<script>alert('Nuevo equipo agregado!');</script>";
+            echo "<script>
+                    alert('Nuevo equipo agregado!'); 
+                    window.location= 'Menu.php';
+
+                  </script>";
         }else {
             echo mysqli_error($conn);
         }
     }
-    consultarTodo($conn);
+   // consultarTodo($conn);
 
     // valida solo numeros en los campos:
     //onkeypress='return event.charCode >= 48 && event.charCode <= 57'

@@ -133,7 +133,7 @@ function lastRows($conn)
     if (!$esAdministrador->num_rows > 0) { // ConsultarSinAcciones($conn);
         ?>
         <div id="table_cont">
-            <table class="table " id="tablaDatos">
+            <table class="table" id="tablaDatos">
                 <thead>
                     <tr>
                         <th scope="col">ID Equipo</th>
@@ -158,7 +158,7 @@ function lastRows($conn)
         ?>
 
         <div id="table_cont">
-            <table class="table " id="tablaDatos">
+            <table class="table-bordered">
                 <thead>
                     <tr>
                         <th scope="col">ID Equipo</th>
@@ -172,7 +172,7 @@ function lastRows($conn)
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
-                <tbody id="resEquipos2">
+                <tbody id="resEquipos2" class="table-striped">
 
                 </tbody>
             </table>
