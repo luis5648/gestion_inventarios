@@ -35,6 +35,13 @@ if ($seguridad->getUsuario() == null) {
             margin: 20px;
 
         }
+
+        #mainForm {
+
+            Margin: 2%;
+            padding: 10%;
+
+        }
     </style>
 </head>
 
@@ -43,39 +50,46 @@ if ($seguridad->getUsuario() == null) {
         <h2>Agregar equipo.</h2>
     </div>
     <div>
-        <form action="" method="post" style="Margin: 2%; padding: 10%;text-align: center">
 
-            <div class="form-group">
+        <form action="" method="post" id="mainForm">
+            <div id="form1">
+
+                <label class="form-control" style="background-color: #e6f7ff ">ID del equipo:</label>
+                <input type="text" name="id_equipo" class="form-control"><br>
+
                 <label class="form-control" style="background-color: #e6f7ff ">Nombre (Descripción del equipo):</label>
                 <input type="text" name="nombre_equipo" class="form-control" required><br>
-            </div>
 
-            <div class="form-group">
+
+                <label class="form-control" style="background-color: #e6f7ff ">Marca:</label>
+                <input type="text" name="marca" class="form-control" required><br>
+
+
                 <label class="form-control" style="background-color: #e6f7ff ">Descripción de la falla en el equipo: </label>
-                <input type="text" name="modelo" class="form-control" autocomplete="off" required>
-            </div>
+                <input type="text" name="modelo" class="form-control" autocomplete="off" required><br>
 
 
-            <div class="form-group">
                 <label class="form-control" style="background-color: #e6f7ff ">Persona que entrega el equipo: </label>
-                <input type="text" name="no_serie" class="form-control" required>
-            </div>
+                <input type="text" name="no_serie" class="form-control" required><br>
 
-            <div class="form-group">
+
                 <label class="form-control" style="background-color: #e6f7ff ">Teléfono: </label>
                 <input type="text" name="telefono" class="form-control" required onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
-            </div>
 
-            <div class="form-group">
+
                 <label class="form-control" style="background-color: #e6f7ff ">Procedencia: </label>
                 <input type="text" name="ubicacion" class="form-control" required><br>
-            </div>
 
-            <div style="text-align: center;">
+
+                <label for="persona">Nombre de la persona que entrega</label>
+                <input type="text" name="persona" class="form-control" id="personaInput">
+
+
                 <button class="btn btn-success" name="addI">Agregar</button>
                 <a href="Menu.php" class="btn btn-secondary">Regresar</a>
-            </div>
 
+
+            </div>
         </form>
 
 
@@ -84,7 +98,7 @@ if ($seguridad->getUsuario() == null) {
     <?php
 
     if (isset($_POST["addI"])) {
-        
+
         $nombreEquipo = $_POST["nombre_equipo"];
         $falla = $_POST["modelo"];
         $entrega = $_POST["no_serie"];
@@ -92,7 +106,7 @@ if ($seguridad->getUsuario() == null) {
         $ubicacionEquipo = $_POST["ubicacion"];
         $STATUS = "PENDIENTE";
 
-        
+
         $sqlNuevoEquipo = "INSERT INTO EQUIPOS(EQUIPO_DESCRIPCION, EQUIPO_PROBLEMA, EQUIPO_PERSONA_ENTREGA, EQUIPO_UCTA_RECIBE, EQUIPO_TELEFONO_PERSONA, EQUIPO_PROCEDENCIA, ESTADO, EQUIPO_FECHA)  
 VALUES ('$nombreEquipo','$falla','$entrega','$usuarioEnSesion','$Telefono','$ubicacionEquipo','$STATUS', NOW()) ";
 
@@ -102,11 +116,11 @@ VALUES ('$nombreEquipo','$falla','$entrega','$usuarioEnSesion','$Telefono','$ubi
                     window.location= 'Menu.php';
 
                   </script>";
-        }else {
+        } else {
             echo mysqli_error($conn);
         }
     }
-   // consultarTodo($conn);
+    // consultarTodo($conn);
 
     // valida solo numeros en los campos:
     //onkeypress='return event.charCode >= 48 && event.charCode <= 57'
