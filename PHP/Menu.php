@@ -1,4 +1,6 @@
 <?php
+
+//TODO: make another view for all the items to see more details.
 require "libs/Seguridad.php";
 require "libs/Conexion.php";
 
